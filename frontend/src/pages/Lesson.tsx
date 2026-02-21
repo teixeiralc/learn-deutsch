@@ -115,7 +115,7 @@ export default function Lesson() {
           </span>
         </div>
 
-        <div className="animate-fade-in">{renderExercise()}</div>
+        <div key={exercise.id} className="animate-fade-in">{renderExercise()}</div>
 
         {submittedResult && (
           <div className="animate-bounce-in" style={{ marginTop: 24 }}>
