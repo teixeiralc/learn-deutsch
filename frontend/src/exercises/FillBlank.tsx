@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
@@ -12,6 +14,8 @@ interface Props {
 export default function FillBlank({ exercise, onSubmit, result, isSubmitting }: Props) {
   const [answer, setAnswer] = useState('');
   const [focused, setFocused] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const { speak, error: ttsError } = useTTS();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,15 +27,35 @@ export default function FillBlank({ exercise, onSubmit, result, isSubmitting }: 
     ? exercise.question.split('\n')
     : [exercise.question, ''];
 
+  const speakText = (exercise.metadata?.speak_text as string | undefined)?.trim()
+    || exercise.correct_answer;
+
+  const handleSpeak = () => {
+    if (!speakText) return;
+    speak(
+      speakText,
+      () => setPlaying(true),
+      () => setPlaying(false),
+    );
+  };
+
   const borderColor = result
     ? result.is_correct ? 'var(--accent-green-br)' : 'var(--accent-red-br)'
     : focused ? 'rgba(245,158,11,0.5)' : 'var(--border-muted)';
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: hint ? 8 : 12 }}>
-        {question}
-      </h2>
+      <ExerciseHeader
+        title={question}
+        onSpeak={handleSpeak}
+        isSpeaking={playing}
+        marginBottom={hint ? 8 : 12}
+      />
+
+      {ttsError && (
+        <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginBottom: 10 }}>{ttsError}</p>
+      )}
+
       {hint && <p style={{ color: 'var(--text-muted)', fontSize: 13, marginBottom: 12, fontStyle: 'italic' }}>{hint}</p>}
 
       <HintRevealComponent

@@ -51,6 +51,7 @@ function buildMCQ(word: Vocabulary, level: Level): GeneratedExercise {
     vocabulary_id: word.id,
     hint: `Starts with "${word.english[0].toUpperCase()}" (${word.part_of_speech})`,
     explanation: `"${word.german}" means "${word.english}". ${word.part_of_speech}${word.gender ? `, ${word.gender}` : ''}.`,
+    metadata: { speak_text: word.german },
   };
 }
 
@@ -78,6 +79,7 @@ function buildFillBlank(word: Vocabulary, level: Level): GeneratedExercise {
       sentence_id: sentence.id,
       hint: `${word.german.length} letters — it means "${word.english}"`,
       explanation: `The missing word is "${word.german}" (${word.english}). Full sentence: "${sentence.german}"`,
+      metadata: { speak_text: sentence.german },
     };
   }
 
@@ -91,6 +93,7 @@ function buildFillBlank(word: Vocabulary, level: Level): GeneratedExercise {
     vocabulary_id: word.id,
     hint: `${word.german.length} letters — starts with "${word.german[0]}"`,
     explanation: `The answer is "${word.german}" which means "${word.english}".`,
+    metadata: { speak_text: word.german },
   };
 }
 
@@ -118,6 +121,7 @@ function buildTranslation(word: Vocabulary, level: Level): GeneratedExercise {
       sentence_id: sentence.id,
       hint: `Key word: "${word.german}" = "${word.english}"`,
       explanation: `"${sentence.german}" = "${sentence.english}"`,
+      metadata: { speak_text: sentence.german },
     };
   }
 
@@ -130,6 +134,7 @@ function buildTranslation(word: Vocabulary, level: Level): GeneratedExercise {
     vocabulary_id: word.id,
     hint: `Starts with "${word.english[0].toUpperCase()}" — it's a ${word.part_of_speech}`,
     explanation: `"${word.german}" translates to "${word.english}".`,
+    metadata: { speak_text: word.german },
   };
 }
 
@@ -161,7 +166,7 @@ function buildSentenceBuilding(word: Vocabulary, level: Level): GeneratedExercis
       vocabulary_id: word.id,
       hint: `${tokens.length} words — starts with "${tokens[0]}"`,
       explanation: `The correct sentence is: "${target.german}"`,
-      metadata: { tokens, shuffled },
+      metadata: { tokens, shuffled, speak_text: target.german },
     };
   }
 
@@ -176,6 +181,7 @@ function buildSentenceBuilding(word: Vocabulary, level: Level): GeneratedExercis
     vocabulary_id: word.id,
     hint: `${tokens.length} words — starts with "${tokens[0]}"`,
     explanation: `The correct sentence is: "${tokens.join(' ')}"`,
+    metadata: { speak_text: tokens.join(' ') },
   };
 }
 
@@ -196,6 +202,7 @@ function buildListening(word: Vocabulary, level: Level): GeneratedExercise {
         audio_url: storedAudioUrl,
         text_to_speak: word.german,
         audio_source: 'stored_file',
+        speak_text: word.german,
       },
     };
   }
@@ -220,7 +227,7 @@ function buildListening(word: Vocabulary, level: Level): GeneratedExercise {
     sentence_id: (target as Sentence).id,
     hint: `${wordCount} word${wordCount > 1 ? 's' : ''} — first word starts with "${textToSpeak[0].toUpperCase()}"`,
     explanation: `You heard: "${textToSpeak}"`,
-    metadata: { text_to_speak: textToSpeak },
+    metadata: { text_to_speak: textToSpeak, speak_text: textToSpeak },
   };
 }
 
@@ -250,6 +257,7 @@ function buildSpeaking(word: Vocabulary, level: Level): GeneratedExercise {
     explanation: `The expected phrase is: "${german}"`,
     metadata: {
       expected_german: german,
+      speak_text: german,
       ...(storedAudioUrl ? { audio_url: storedAudioUrl, audio_source: 'stored_file' } : {}),
     },
   };

@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
@@ -12,6 +14,8 @@ interface Props {
 export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitting }: Props) {
   const words: string[] = exercise.options ?? [];
   const [selected, setSelected] = useState<string[]>([]);
+  const [playing, setPlaying] = useState(false);
+  const { speak, error: ttsError } = useTTS();
 
   const wordPool = [...words];
   const usedIndices = new Set<number>();
@@ -35,6 +39,18 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
   };
 
   const isCorrect = result?.is_correct;
+  const speakText = (exercise.metadata?.speak_text as string | undefined)?.trim()
+    || exercise.correct_answer;
+
+  const handleSpeak = () => {
+    if (!speakText) return;
+    speak(
+      speakText,
+      () => setPlaying(true),
+      () => setPlaying(false),
+    );
+  };
+
   const wordBtnBase: React.CSSProperties = {
     padding: '8px 14px', borderRadius: 10, cursor: 'pointer', fontFamily: 'inherit',
     fontSize: 14, fontWeight: 500, transition: 'all 0.15s ease',
@@ -42,9 +58,17 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
-        {exercise.question}
-      </h2>
+      <ExerciseHeader
+        title={exercise.question}
+        onSpeak={handleSpeak}
+        isSpeaking={playing}
+        marginBottom={8}
+      />
+
+      {ttsError && (
+        <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginBottom: 12 }}>{ttsError}</p>
+      )}
+
       <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>Tap words to build the sentence</p>
 
       <HintRevealComponent

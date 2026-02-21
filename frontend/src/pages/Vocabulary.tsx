@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppStore } from '../stores/appStore';
 import { getVocabularyProgress } from '../services/api';
+import { useTTS } from '../hooks/useTTS';
 import LoadingSpinner from '../components/LoadingSpinner';
 import type { Level, VocabularyWithProgress } from '../types';
 
@@ -12,12 +13,23 @@ const POS_COLORS: Record<string, string> = {
 };
 const strengthColor = (s: number | null) => s === null ? 'var(--text-muted)' : s >= 0.8 ? '#10b981' : s >= 0.5 ? '#f59e0b' : '#f87171';
 
+function SpeakerIcon({ active }: { active: boolean }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: active ? '#f59e0b' : 'currentColor' }}>
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+    </svg>
+  );
+}
+
 export default function Vocabulary() {
   const { selectedLevel } = useAppStore();
   const [words, setWords] = useState<VocabularyWithProgress[]>([]);
   const [filter, setFilter] = useState<Level>(selectedLevel);
   const [search, setSearch] = useState('');
   const [loading, setLoading] = useState(true);
+  const [playingWordId, setPlayingWordId] = useState<number | null>(null);
+  const { speak, error: ttsError } = useTTS();
 
   useEffect(() => {
     setLoading(true);
@@ -28,6 +40,14 @@ export default function Vocabulary() {
     !search || w.german.toLowerCase().includes(search.toLowerCase()) || w.english.toLowerCase().includes(search.toLowerCase())
   );
   const studied = words.filter(w => w.repetition_count && w.repetition_count > 0).length;
+
+  const playWord = (wordId: number, german: string) => {
+    speak(
+      german,
+      () => setPlayingWordId(wordId),
+      () => setPlayingWordId(null),
+    );
+  };
 
   return (
     <div style={{ padding: '48px 56px', maxWidth: 860, margin: '0 auto' }}>
@@ -65,6 +85,10 @@ export default function Vocabulary() {
         </div>
       </div>
 
+      {ttsError && (
+        <p style={{ color: 'var(--accent-red-br)', fontSize: 12, marginBottom: 14 }}>{ttsError}</p>
+      )}
+
       {loading ? <LoadingSpinner message="Loading vocabulary…" /> : (
         <div style={{ display: 'flex', flexDirection: 'column', gap: 7 }}>
           {filtered.length === 0 && (
@@ -92,6 +116,27 @@ export default function Vocabulary() {
                 <div style={{ flex: 1, minWidth: 0 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 7, marginBottom: 2, flexWrap: 'wrap' }}>
                     <span style={{ fontWeight: 700, fontSize: 15, color: 'var(--text-primary)' }}>{word.german}</span>
+                    <button
+                      type="button"
+                      onClick={() => playWord(word.id, word.german)}
+                      title={`Hear ${word.german}`}
+                      style={{
+                        width: 22,
+                        height: 22,
+                        borderRadius: 99,
+                        border: `1px solid ${playingWordId === word.id ? 'rgba(245,158,11,0.35)' : 'var(--border-muted)'}`,
+                        background: playingWordId === word.id ? 'rgba(245,158,11,0.14)' : 'var(--bg-card)',
+                        color: playingWordId === word.id ? '#f59e0b' : 'var(--text-muted)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        cursor: 'pointer',
+                        padding: 0,
+                        transition: 'all 0.18s ease',
+                      }}
+                    >
+                      <SpeakerIcon active={playingWordId === word.id} />
+                    </button>
                     {word.gender && <span style={{ fontSize: 11, color: '#38bdf8', fontWeight: 600 }}>{word.gender}</span>}
                     <span style={{
                       fontSize: 10, fontWeight: 600, padding: '2px 7px', borderRadius: 99,

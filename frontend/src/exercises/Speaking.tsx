@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent'; 
 
 interface Props {
@@ -56,9 +57,12 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
 
   return (
     <div>
-      <h2 style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
-        Say this sentence aloud:
-      </h2>
+      <ExerciseHeader
+        title="Say this sentence aloud:"
+        onSpeak={handleSpeak}
+        isSpeaking={playing}
+        marginBottom={8}
+      />
 
       {/* German sentence */}
       <div style={{

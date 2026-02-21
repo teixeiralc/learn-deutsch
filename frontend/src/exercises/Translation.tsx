@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent'; 
 
 interface Props {
@@ -12,6 +14,19 @@ interface Props {
 export default function Translation({ exercise, onSubmit, result, isSubmitting }: Props) {
   const [answer, setAnswer] = useState('');
   const [focused, setFocused] = useState(false);
+  const [playing, setPlaying] = useState(false);
+  const { speak, error: ttsError } = useTTS();
+
+  const speakText = (exercise.metadata?.speak_text as string | undefined)?.trim() || null;
+
+  const handleSpeak = () => {
+    if (!speakText) return;
+    speak(
+      speakText,
+      () => setPlaying(true),
+      () => setPlaying(false),
+    );
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,9 +40,16 @@ export default function Translation({ exercise, onSubmit, result, isSubmitting }
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
-        {exercise.question}
-      </h2>
+      <ExerciseHeader
+        title={exercise.question}
+        onSpeak={speakText ? handleSpeak : undefined}
+        isSpeaking={playing}
+        marginBottom={8}
+      />
+
+      {ttsError && (
+        <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginBottom: 12 }}>{ttsError}</p>
+      )}
 
       <HintRevealComponent
         hint={exercise.hint}
