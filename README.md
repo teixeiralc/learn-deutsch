@@ -19,6 +19,7 @@ A Duolingo-style German learning app with a local SQLite backend and ElevenLabs-
 - Node.js 18+
 - npm 9+
 - ElevenLabs API key
+- Optional: extracted Anki media folder for stored card audio
 
 ### 1. Clone & install
 
@@ -37,6 +38,7 @@ cd frontend && npm install && cd ..
 ```bash
 cp backend/.env.example backend/.env
 # Add your ElevenLabs key to backend/.env
+# Optional: set ANKI_MEDIA_PATH to your extracted Anki audio directory
 ```
 
 ### 3. Setup database & seed data
@@ -53,6 +55,9 @@ cd backend && npx tsx ../scripts/import-vocabulary.ts ../scripts/vocabulary.csv 
 
 # Import example sentences (56 pairs, linked to vocabulary)
 cd backend && npx tsx ../scripts/import-sentences.ts ../scripts/sentences.csv && cd ..
+
+# Import Anki collection (reads notes.flds from collection.anki2)
+cd backend && npx tsx scripts/import-anki.ts ../collection.anki2 && cd ..
 ```
 
 ### 4. Run

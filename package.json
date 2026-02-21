@@ -7,6 +7,7 @@
     "dev": "npm-run-all --parallel dev:backend dev:frontend",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
+    "import:anki": "cd backend && npx tsx scripts/import-anki.ts",
     "import:vocab": "cd backend && npx tsx ../scripts/import-vocabulary.ts ../scripts/vocabulary.csv",
     "import:sentences": "cd backend && npx tsx ../scripts/import-sentences.ts ../scripts/sentences.csv"
   },

@@ -24,20 +24,25 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
   const [hasPlayed, setHasPlayed] = useState(false);
   const [playing, setPlaying] = useState(false);
   const { isListening, transcript, startListening, stopListening, isSupported } = useSpeechRecognition();
-  const { speak, error: ttsError } = useTTS();
+  const { speak, playUrl, error: ttsError } = useTTS();
 
   // Extract the German text from the question (format: "Say this sentence aloud:\n"text" (english)")
   const germanText = (exercise.metadata?.expected_german as string) ?? exercise.correct_answer;
+  const audioUrl = (exercise.metadata?.audio_url as string) ?? null;
 
   const handleSpeak = () => {
-    speak(
-      germanText,
-      () => setPlaying(true),
-      (didPlay) => {
-        setPlaying(false);
-        if (didPlay) setHasPlayed(true);
-      },
-    );
+    const handleStart = () => setPlaying(true);
+    const handleEnd = (didPlay: boolean) => {
+      setPlaying(false);
+      if (didPlay) setHasPlayed(true);
+    };
+
+    if (audioUrl) {
+      playUrl(audioUrl, handleStart, handleEnd);
+      return;
+    }
+
+    speak(germanText, handleStart, handleEnd);
   };
 
   useEffect(() => {

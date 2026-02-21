@@ -210,6 +210,44 @@ export function useTTS() {
     }
   };
 
+  const playUrl = async (url: string, onStart?: () => void, onEnd?: (didPlay: boolean) => void) => {
+    const normalized = url.trim();
+    if (!normalized) {
+      onEnd?.(false);
+      return;
+    }
+
+    stop(false);
+    const playbackId = playbackIdRef.current + 1;
+    playbackIdRef.current = playbackId;
+
+    setError(null);
+    onEndRef.current = onEnd ?? null;
+
+    try {
+      const audio = new Audio(normalized);
+      audioRef.current = audio;
+
+      audio.onended = () => {
+        finalizePlayback(true, playbackId);
+      };
+
+      audio.onerror = () => {
+        if (playbackIdRef.current !== playbackId) return;
+        setError(AUDIO_ERROR_MESSAGE);
+        finalizePlayback(false, playbackId);
+      };
+
+      onStart?.();
+      await audio.play();
+    } catch (err: unknown) {
+      if (playbackIdRef.current !== playbackId) return;
+      setError(AUDIO_ERROR_MESSAGE);
+      finalizePlayback(false, playbackId);
+      console.error('Audio URL playback failed', err);
+    }
+  };
+
   useEffect(() => {
     return () => {
       stop(false);
@@ -220,5 +258,5 @@ export function useTTS() {
     };
   }, []);
 
-  return { speak, stop, error };
+  return { speak, playUrl, stop, error };
 }
