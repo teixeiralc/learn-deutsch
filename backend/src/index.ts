@@ -7,6 +7,7 @@ import sentencesRouter from './routes/sentences.js';
 import grammarRouter from './routes/grammar.js';
 import exercisesRouter from './routes/exercises.js';
 import progressRouter from './routes/progress.js';
+import ttsRouter from './routes/tts.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -24,6 +25,7 @@ app.use('/api/sentences', sentencesRouter);
 app.use('/api/grammar-topics', grammarRouter);
 app.use('/api/exercises', exercisesRouter);
 app.use('/api/progress', progressRouter);
+app.use('/api/tts', ttsRouter);
 app.use('/api', progressRouter); // for /api/stats
 
 // Health check
