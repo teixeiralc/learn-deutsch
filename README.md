@@ -1,11 +1,12 @@
 # Learn Deutsch 🇩🇪
 
-A Duolingo-style German learning app with a local SQLite backend and ElevenLabs-powered pronunciation audio.
+A Duolingo-style German learning app with a local SQLite backend and ElevenLabs-powered pronunciation audio cached on disk.
 
 ### Features
 - 🧠 **SM-2 spaced repetition** — Anki-level scheduling
 - 🎯 **6 exercise types** — MCQ, fill-blank, translation, sentence building, listening, speaking
 - 🎧 **ElevenLabs TTS** — high-quality pronunciation for listening and speaking prompts
+- 💾 **Local TTS cache** — generated audio is stored in `backend/tts-cache` and reused before calling ElevenLabs
 - 🎤 **Web Speech API** — Chrome speech recognition for speaking
 - 🔥 **XP & streak tracking**
 - 📚 **Vocabulary browser** with progress scores
@@ -18,7 +19,7 @@ A Duolingo-style German learning app with a local SQLite backend and ElevenLabs-
 ### Prerequisites
 - Node.js 18+
 - npm 9+
-- ElevenLabs API key
+- ElevenLabs API key (required for uncached TTS requests)
 - Optional: extracted Anki media folder for stored card audio
 
 ### 1. Clone & install
@@ -38,6 +39,7 @@ cd frontend && npm install && cd ..
 ```bash
 cp backend/.env.example backend/.env
 # Add your ElevenLabs key to backend/.env
+# Optional: override TTS cache directory with TTS_CACHE_DIR
 # Optional: set ANKI_MEDIA_PATH to your extracted Anki audio directory
 ```
 
