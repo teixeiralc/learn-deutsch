@@ -1,5 +1,9 @@
 import { useCallback, useEffect, useRef } from 'react';
 
+const CORRECT_CUE_GAIN = 0.13;
+const CORRECT_CUE_ACCENT_GAIN = 0.11;
+const WRONG_CUE_GAIN = 0.12;
+
 type WebkitWindow = Window & {
   webkitAudioContext?: typeof AudioContext;
 };
@@ -58,8 +62,8 @@ export function useAnswerAudio(soundEnabled: boolean) {
 
     const schedule = () => {
       const now = ctx.currentTime + 0.01;
-      playTone(ctx, 520, 'sine', now, 0.11, 0.06);
-      playTone(ctx, 740, 'triangle', now + 0.12, 0.14, 0.05);
+      playTone(ctx, 520, 'sine', now, 0.11, CORRECT_CUE_GAIN);
+      playTone(ctx, 740, 'triangle', now + 0.12, 0.14, CORRECT_CUE_ACCENT_GAIN);
     };
 
     if (ctx.state === 'suspended') {
@@ -84,7 +88,7 @@ export function useAnswerAudio(soundEnabled: boolean) {
       osc.frequency.exponentialRampToValueAtTime(140, now + 0.16);
 
       gain.gain.setValueAtTime(0.0001, now);
-      gain.gain.exponentialRampToValueAtTime(0.055, now + 0.015);
+      gain.gain.exponentialRampToValueAtTime(WRONG_CUE_GAIN, now + 0.015);
       gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.18);
 
       osc.connect(gain);
