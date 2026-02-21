@@ -1,98 +1,2001 @@
 german,english,part_of_speech,gender,plural,level,frequency_rank
-sein,to be,verb,,,A1,1
-haben,to have,verb,,,A1,2
-werden,to become,verb,,,A1,3
-können,can / to be able to,verb,,,A1,4
-müssen,must / to have to,verb,,,A1,5
-sagen,to say,verb,,,A1,6
-machen,to do / to make,verb,,,A1,7
-gehen,to go,verb,,,A1,8
-kommen,to come,verb,,,A1,9
-wollen,to want,verb,,,A1,10
-Mann,man,noun,der,Männer,A1,11
-Frau,woman,noun,die,Frauen,A1,12
-Kind,child,noun,das,Kinder,A1,13
-Haus,house,noun,das,Häuser,A1,14
-Auto,car,noun,das,Autos,A1,15
-Hund,dog,noun,der,Hunde,A1,16
-Katze,cat,noun,die,Katzen,A1,17
-Wasser,water,noun,das,,A1,18
-Brot,bread,noun,das,Brote,A1,19
-Milch,milk,noun,die,,A1,20
-groß,big / tall,adjective,,,A1,21
-klein,small / short,adjective,,,A1,22
-gut,good,adjective,,,A1,23
-schlecht,bad,adjective,,,A1,24
-neu,new,adjective,,,A1,25
-alt,old,adjective,,,A1,26
-ja,yes,adverb,,,A1,27
-nein,no,adverb,,,A1,28
-nicht,not,adverb,,,A1,29
-und,and,conjunction,,,A1,30
-aber,but,conjunction,,,A1,31
-oder,or,conjunction,,,A1,32
-in,in,preposition,,,A1,33
-auf,on / upon,preposition,,,A1,34
-mit,with,preposition,,,A1,35
-ich,I,pronoun,,,A1,36
-du,you (informal),pronoun,,,A1,37
-er,he,pronoun,,,A1,38
-sie,she / they,pronoun,,,A1,39
-wir,we,pronoun,,,A1,40
-Zeit,time,noun,die,Zeiten,A2,41
-Arbeit,work,noun,die,Arbeiten,A2,42
-Schule,school,noun,die,Schulen,A2,43
-Stadt,city,noun,die,Städte,A2,44
-Land,country,noun,das,Länder,A2,45
-Geld,money,noun,das,,A2,46
-Buch,book,noun,das,Bücher,A2,47
-Tisch,table,noun,der,Tische,A2,48
-Stuhl,chair,noun,der,Stühle,A2,49
-Fenster,window,noun,das,Fenster,A2,50
-kaufen,to buy,verb,,,A2,51
-verkaufen,to sell,verb,,,A2,52
-schreiben,to write,verb,,,A2,53
-lesen,to read,verb,,,A2,54
-essen,to eat,verb,,,A2,55
-trinken,to drink,verb,,,A2,56
-fahren,to drive / to travel,verb,,,A2,57
-wohnen,to live / to reside,verb,,,A2,58
-lernen,to learn,verb,,,A2,59
-spielen,to play,verb,,,A2,60
-schön,beautiful / nice,adjective,,,A2,61
-schwer,heavy / difficult,adjective,,,A2,62
-leicht,light / easy,adjective,,,A2,63
-schnell,fast,adjective,,,A2,64
-langsam,slow,adjective,,,A2,65
-teuer,expensive,adjective,,,A2,66
-billig,cheap,adjective,,,A2,67
-weil,because,conjunction,,,A2,68
-dass,that (conjunction),conjunction,,,A2,69
-wenn,when / if,conjunction,,,A2,70
-Wirtschaft,economy,noun,die,,B1,71
-Gesellschaft,society,noun,die,,B1,72
-Entwicklung,development,noun,die,Entwicklungen,B1,73
-Erfahrung,experience,noun,die,Erfahrungen,B1,74
-Möglichkeit,possibility,noun,die,Möglichkeiten,B1,75
-Verantwortung,responsibility,noun,die,,B1,76
-entscheiden,to decide,verb,,,B1,77
-erklären,to explain,verb,,,B1,78
-beschreiben,to describe,verb,,,B1,79
-bedeuten,to mean,verb,,,B1,80
-versuchen,to try / to attempt,verb,,,B1,81
-erreichen,to reach / to achieve,verb,,,B1,82
-wichtig,important,adjective,,,B1,83
-notwendig,necessary,adjective,,,B1,84
-möglich,possible,adjective,,,B1,85
-obwohl,although,conjunction,,,B1,86
-damit,so that / with it,conjunction,,,B1,87
-Zusammenhang,context / connection,noun,der,Zusammenhänge,B2,88
-Voraussetzung,prerequisite,noun,die,Voraussetzungen,B2,89
-Auswirkung,impact / effect,noun,die,Auswirkungen,B2,90
-beeinflussen,to influence,verb,,,B2,91
-berücksichtigen,to take into account,verb,,,B2,92
-gewährleisten,to ensure / to guarantee,verb,,,B2,93
-erheblich,considerable,adjective,,,B2,94
-grundlegend,fundamental,adjective,,,B2,95
-allerdings,however / admittedly,adverb,,,B2,96
-hingegen,on the other hand,adverb,,,B2,97
+danken,to thank,verb,,,A1,1
+wohnen,to live,verb,,,A1,2
+ergänzen,to supplement,verb,,,A1,3
+zahlen,to pay,verb,,,A1,4
+heute,today,adverb,,,A1,5
+ab,away from or off,preposition,,,A1,6
+aber,but,conjunction,,,A1,7
+abfahren,to depart,verb,,,A1,8
+abgeben,to hand in,verb,,,A1,9
+allein,to leave alone,verb,,,A1,10
+also,therefore,adjective,,,A1,11
+Alter,age,noun,das,Alter,A1,12
+an,at,preposition,,,A1,13
+anfangen,to start,verb,,,A1,14
+anklicken,to click on,verb,,,A1,15
+Anrede,Form of address,noun,die,Anreden,A1,16
+Anruf,a phone call,noun,der,Anrufe,A1,17
+Ansage,announcement,noun,die,Ansagen,A1,18
+antworten,to answer,verb,,,A1,19
+Anzeige,Advertisement,noun,die,Anzeigen,A1,20
+Apartment,Apartment,noun,das,Apartments,A1,21
+arbeitslos,unemployed,adjective,,,A1,22
+Arbeitsplatz,workplace,noun,der,Arbeitsplätze,A1,23
+Arzt,doctor,noun,der,Ärzte,A1,24
+auch,also,adjective,,,A1,25
+Aufgabe,task,noun,die,Aufgaben,A1,26
+aufhören,to stop,verb,,,A1,27
+aufstehen,to stand up,verb,,,A1,28
+Auge,eye (organ of sight),noun,das,Augen,A1,29
+aus,out of,preposition,,,A1,30
+ausfüllen,to fill out,verb,,,A1,31
+aussehen,to look,verb,,,A1,32
+Auto,car,noun,das,Autos,A1,33
+automatisch,automatically,adjective,,,A1,34
+baden,to bathe,verb,,,A1,35
+bald,soon,adjective,,,A1,36
+Balkon,balcony,noun,,,A1,37
+beginnen,to begin,verb,,,A1,38
+bei,at,preposition,,,A1,39
+Bein,leg,noun,,,A1,40
+bekannt,well-known,adjective,,,A1,41
+besichtigen,to inspect,verb,,,A1,42
+bestellen,to order,verb,,,A1,43
+Bett,bed,noun,das,Betten,A1,44
+bitter,bitter,adjective,,,A1,45
+bleiben,to stay,verb,,,A1,46
+Blick,glance,noun,der,Blicke,A1,47
+böse,evil,adjective,,,A1,48
+Briefmarke,postage stamp,noun,die,Briefmarken,A1,49
+Bruder,brother,noun,der,Brüder,A1,50
+Buch,book,noun,das,Bücher,A1,51
+Buchstabe,letter (a single character or symbol in an alphabet),noun,der,Buchstaben,A1,52
+buchstabieren,to spell,verb,,,A1,53
+da,there,adjective,,,A1,54
+daneben,next to it,verb,,,A1,55
+dann,then,verb,,,A1,56
+denn,for,verb,,,A1,57
+Doktor,doctor (a person who has been awarded the highest academic degree,noun,der,Doktoren,A1,58
+Dorf,village,noun,das,Dörfer,A1,59
+dort,there,adverb,,,A1,60
+drucken,to print,verb,,,A1,61
+drücken,to press,verb,,,A1,62
+durch,through,preposition,,,A1,63
+Durchsage,announcement,noun,die,Durchsagen,A1,64
+dürfen,to be allowed to,verb,,,A1,65
+Ecke,corner,noun,die,Ecken,A1,66
+einfach,simple,adjective,,,A1,67
+einkaufen,to shop,verb,,,A1,68
+einmal,once,adjective,,,A1,69
+einsteigen,to get in,verb,,,A1,70
+Eintritt,admission,noun,der,Eintritte,A1,71
+Empfänger,recipient,noun,der,Empfänger,A1,72
+enden,to end,verb,,,A1,73
+erlauben,to allow,verb,,,A1,74
+es,it,pronoun,,,A1,75
+fahren,to drive,verb,,,A1,76
+falsch,wrong,adjective,,,A1,77
+Familie,family,noun,die,Familien,A1,78
+Farbe,color,noun,die,Farben,A1,79
+feiern,to celebrate,verb,,,A1,80
+fehlen,to be missing,verb,,,A1,81
+Fehler,mistake,noun,der,Fehler,A1,82
+Film,film,noun,der,Filme,A1,83
+finden,to find,verb,,,A1,84
+Flasche,bottle,noun,die,Flaschen,A1,85
+fliegen,to fly,verb,,,A1,86
+Formular,Form,noun,das,Formulare,A1,87
+Frau,woman,noun,die,Frauen,A1,88
+fremd,foreign,adjective,,,A1,89
+Freund,friend,noun,der,Freunde,A1,90
+frühstücken,to have breakfast,verb,,,A1,91
+Führung,leadership,noun,die,Führungen,A1,92
+Gast,guest,noun,der,Gäste,A1,93
+gefallen,to please,verb,,,A1,94
+gehen,to go,verb,,,A1,95
+gerade,straight,adjective,,,A1,96
+Geschenk,gift,noun,das,Geschenke,A1,97
+gestern,yesterday,verb,,,A1,98
+Getränk,drink,noun,das,Getränke,A1,99
+glauben,to believe,verb,,,A1,100
+gleich,same,adjective,,,A1,101
+glücklich,happy,adjective,,,A1,102
+grillen,to grill,verb,,,A1,103
+groß,big,adjective,,,A1,104
+Gruß,greeting,noun,der,Grüße,A1,105
+gültig,valid,adjective,,,A1,106
+günstig,favorable,adjective,,,A1,107
+Haar,hair (referring to a single strand or the collective mass of hair on the head or body),noun,das,Haare,A1,108
+haben,to have,verb,,,A1,109
+halten,to hold,verb,,,A1,110
+Hand,hand (a body part at the end of the arm),noun,die,Hände,A1,111
+heiraten,to marry,verb,,,A1,112
+heißen,to be called,verb,,,A1,113
+hell,bright,adjective,,,A1,114
+hinten,at/in the back,verb,,,A1,115
+Hobby,hobby,noun,das,Hobbys,A1,116
+hoch,high,adjective,,,A1,117
+holen,to fetch,verb,,,A1,118
+immer,always,adverb,,,A1,119
+in,in,preposition,,,A1,120
+Information,to inform,verb,,,A1,121
+international,international,adjective,,,A1,122
+ja,yes,adjective,,,A1,123
+Jacke,jacket,noun,die,Jacken,A1,124
+jetzt,now,adjective,,,A1,125
+Jugendliche,adolescent or young person,noun,der,Jugendliche,A1,126
+Junge,boy,noun,der,Jungen,A1,127
+kaputt,broken,adjective,,,A1,128
+Karte,card,noun,die,Karten,A1,129
+Kartoffel,potato,noun,die,Kartoffeln,A1,130
+kaufen,to buy,verb,,,A1,131
+kennen,to know,verb,,,A1,132
+Kino,cinema,noun,das,Kinos,A1,133
+klein,small,adjective,,,A1,134
+kochen,to cook,verb,,,A1,135
+kommen,to come,verb,,,A1,136
+können,to be able to,verb,,,A1,137
+kosten,to cost,verb,,,A1,138
+krank,ill,adjective,,,A1,139
+kriegen,to get,verb,,,A1,140
+kulturell,cultural,adjective,,,A1,141
+Kunde,customer,noun,der,Kunden,A1,142
+Kurs,course,noun,der,Kurse,A1,143
+kurz,short,adjective,,,A1,144
+lachen,to laugh,verb,,,A1,145
+Laden,to load,verb,,,A1,146
+Land,country,noun,das,Länder,A1,147
+lang,long,adjective,,,A1,148
+laufen,to run,verb,,,A1,149
+laut,loudly/loud,adjective,,,A1,150
+Leben,to live,verb,,,A1,151
+Mittel,means,noun,das,Mittel,A1,152
+ledig,unmarried,adjective,,,A1,153
+legen,to lay or to put,verb,,,A1,154
+leicht,easy,adjective,,,A1,155
+leider,unfortunately,adjective,,,A1,156
+leise,quiet,adjective,,,A1,157
+lesen,to read,verb,,,A1,158
+lieb,dear,adjective,,,A1,159
+liegen,to lie,verb,,,A1,160
+links,on/to the left,adjective,,,A1,161
+Lösung,solution,noun,die,Lösungen,A1,162
+lustig,funny,adjective,,,A1,163
+Mann,man (a male adult human being),noun,,,A1,164
+Maschine,machine,noun,die,Maschinen,A1,165
+mehr,more,adjective,,,A1,166
+meist,most,adjective,,,A1,167
+Mensch,human being,noun,der,Menschen,A1,168
+mieten,to rent,verb,,,A1,169
+möglich,possible,adjective,,,A1,170
+müde,tired,adjective,,,A1,171
+müssen,to have to,verb,,,A1,172
+Mutter,mother,noun,die,Mütter,A1,173
+nach,after,preposition,,,A1,174
+Name,name,noun,der,Namen,A1,175
+nehmen,to take,verb,,,A1,176
+nein,no,verb,,,A1,177
+nicht,Not,adjective,,,A1,178
+nichts,nothing,adjective,,,A1,179
+noch,still,adjective,,,A1,180
+Nummer,number,noun,die,Nummern,A1,181
+oben,above,verb,,,A1,182
+öffnen,to open,verb,,,A1,183
+ohne,without,preposition,,,A1,184
+Party,party,noun,die,Partys or Parties,A1,185
+Pass,passport,noun,der,Pässe,A1,186
+Plan,to plan,verb,,,A1,187
+Platz,place,noun,der,Plätze,A1,188
+Praktikum,internship,noun,das,Praktika,A1,189
+Preis,price,noun,der,Preise,A1,190
+Problem,problem,noun,das,Probleme,A1,191
+Prospekt,brochure,noun,der,Prospekte,A1,192
+pünktlich,on time,adjective,,,A1,193
+rauchen,to smoke,verb,,,A1,194
+Rechnung,bill,noun,die,Rechnungen,A1,195
+rechts,to the right,adjective,,,A1,196
+regnen,to rain,verb,,,A1,197
+reisen,to travel,verb,,,A1,198
+reparieren,to repair,verb,,,A1,199
+Restaurant,restaurant,noun,das,Restaurants,A1,200
+riechen,to smell,verb,,,A1,201
+ruhig,calm/quiet,adjective,,,A1,202
+scheinen,to seem,verb,,,A1,203
+schicken,to send,verb,,,A1,204
+Schinken,ham (a cured and often smoked meat product),verb,,,A1,205
+schlafen,to sleep,verb,,,A1,206
+schließen,to close,verb,,,A1,207
+Schlüssel,key (a device used to operate a lock),noun,der,Schlüssel,A1,208
+schnell,fast,adjective,,,A1,209
+Schrank,cabinet or wardrobe,noun,der,Schränke,A1,210
+schreiben,to write,verb,,,A1,211
+Schwester,sister,noun,die,Schwestern,A1,212
+schwimmen,to swim,verb,,,A1,213
+sehen,to see,verb,,,A1,214
+sein,to be,verb,,,A1,215
+seit,since,preposition,,,A1,216
+selbstständig,independent,adjective,,,A1,217
+sofort,immediately,adjective,,,A1,218
+Sohn,son,noun,,,A1,219
+spät,late,adjective,,,A1,220
+Speisekarte,menu,noun,die,Speisekarten,A1,221
+spielen,to play,verb,,,A1,222
+Stadt,city,noun,die,Städte,A1,223
+stehen,to stand,verb,,,A1,224
+Stelle,position,noun,die,Stellen,A1,225
+studieren,to study,verb,,,A1,226
+Stunde,hour,noun,die,Stunden,A1,227
+Tasche,bag,noun,die,Taschen,A1,228
+Teil,part,noun,,Teile,A1,229
+Termin,to fix,verb,,,A1,230
+teuer,expensive,adjective,,,A1,231
+Text,text,noun,der,Texte,A1,232
+Tisch,table,noun,der,Tische,A1,233
+Tochter,daughter,noun,die,Töchter,A1,234
+Tomate,tomato (a red or yellowish fruit used in cooking),noun,die,Tomaten,A1,235
+Treppe,staircase,noun,die,Treppen,A1,236
+über,over,preposition,,,A1,237
+übernachten,to stay overnight,verb,,,A1,238
+überweisen,to transfer (money),verb,,,A1,239
+um,around,preposition,,,A1,240
+sich umziehen,to change clothes,verb,,,A1,241
+unten,below,verb,,,A1,242
+unter,under,preposition,,,A1,243
+Vater,father,noun,der,Väter,A1,244
+verboten,to forbid,verb,,,A1,245
+verdienen,to earn,verb,,,A1,246
+verheiratet,married,adjective,,,A1,247
+verkaufen,to sell,verb,,,A1,248
+vermieten,to rent out,verb,,,A1,249
+Verwandte,relatives,noun,,Verwandte,A1,250
+vielleicht,perhaps,adjective,,,A1,251
+von,of,preposition,,,A1,252
+vor,before,preposition,,,A1,253
+Vorname,first name,noun,der,Vornamen,A1,254
+wandern,to hike,verb,,,A1,255
+weiblich,feminine,adjective,,,A1,256
+weit,far,adjective,,,A1,257
+werden,to become,verb,,,A1,258
+wichtig,important,adjective,,,A1,259
+wunderbar,wonderful,adjective,,,A1,260
+Zeitung,newspaper,noun,die,Zeitungen,A1,261
+Zimmer,room,noun,das,Zimmer,A1,262
+Zoll,customs,noun,der,Zölle,A1,263
+zu,to,preposition,,,A1,264
+zufrieden,content,verb,,,A1,265
+zwischen,between,preposition,,,A1,266
+bung,bung,adjective,,,A1,267
+systeme,systeme,adjective,,,A1,268
+schieden,schieden,verb,,,A1,269
+erschließbar,erschließbar,adjective,,,A1,270
+zusammengestellt,zusammengestellt,adjective,,,A1,271
+umwelt,umwelt,adjective,,,A1,272
+wortschatz,wortschatz,adjective,,,A1,273
+chen,chen,verb,,,A1,274
+unterschieden,unterschieden,verb,,,A1,275
+aufgelistet,aufgelistet,adjective,,,A1,276
+dritte,dritte,adjective,,,A1,277
+wortgruppenliste,wortgruppenliste,adjective,,,A1,278
+eins,eins,adjective,,,A1,279
+zwei,zwei,adjective,,,A1,280
+drei,drei,adjective,,,A1,281
+vier,vier,adjective,,,A1,282
+fünf,fünf,adjective,,,A1,283
+sechs,sechs,adjective,,,A1,284
+sieben,sieben,verb,,,A1,285
+acht,acht,adjective,,,A1,286
+neun,neun,adjective,,,A1,287
+zehn,zehn,adjective,,,A1,288
+zwölf,zwölf,adjective,,,A1,289
+dreizehn,dreizehn,adjective,,,A1,290
+vierzehn,vierzehn,adjective,,,A1,291
+fünfzehn,fünfzehn,adjective,,,A1,292
+sechzehn,sechzehn,adjective,,,A1,293
+siebzehn,siebzehn,adjective,,,A1,294
+achtzehn,achtzehn,adjective,,,A1,295
+neunzehn,neunzehn,adjective,,,A1,296
+zwanzig,zwanzig,adjective,,,A1,297
+einundzwanzig,einundzwanzig,adjective,,,A1,298
+dreißig,dreißig,adjective,,,A1,299
+vierzig,vierzig,adjective,,,A1,300
+fünfzig,fünfzig,adjective,,,A1,301
+sechzig,sechzig,adjective,,,A1,302
+siebzig,siebzig,adjective,,,A1,303
+achtzig,achtzig,adjective,,,A1,304
+neunzig,neunzig,adjective,,,A1,305
+hunderteins,hunderteins,adjective,,,A1,306
+zweihundert,zweihundert,adjective,,,A1,307
+zweite,zweite,adjective,,,A1,308
+vierte,vierte,adjective,,,A1,309
+uhrzeit,uhrzeit,adjective,,,A1,310
+null,null,adjective,,,A1,311
+vierundzwanzig,vierundzwanzig,adjective,,,A1,312
+zeitmaße,zeitmaße,adjective,,,A1,313
+am,am,adjective,,,A1,314
+währungen,währungen,verb,,,A1,315
+deutsch,deutsch,adjective,,,A1,316
+europäisch,europäisch,adjective,,,A1,317
+ankreuzen,ankreuzen,verb,,,A1,318
+wortliste,wortliste,adjective,,,A1,319
+sich,sich,adjective,,,A1,320
+Baby,Baby,noun,das,-s,A1,321
+beide,beide,adjective,,,A1,322
+besetzt,besetzt,adjective,,,A1,323
+besser,besser,adjective,,,A1,324
+best,best,adjective,,,A1,325
+bisschen,bisschen,verb,,,A1,326
+dich,dich,pronoun,,,A1,327
+dies,dies,adjective,,,A1,328
+Disco,Disco,noun,die,,A1,329
+E-Mail,E-Mail,noun,die,-s,A1,330
+er,er,pronoun,,,A1,331
+Erwachsene,Erwachsene,noun,der,-n,A1,332
+euer,euer,pronoun,,,A1,333
+Fisch,Fisch,noun,der,-e,A1,334
+früher,früher,adjective,,,A1,335
+geboren,geboren,verb,,,A1,336
+gestorben,gestorben,verb,,,A1,337
+hier,hier,adverb,,,A1,338
+ich,ich,pronoun,,,A1,339
+kein,kein,adjective,,,A1,340
+letzt,letzt,adjective,,,A1,341
+mein,mein,pronoun,,,A1,342
+morgen,morgen,verb,,,A1,343
+geöffnet,geöffnet,adjective,,,A1,344
+Partnerin,Partnerin,noun,die,-nen,A1,345
+Rezeption,Rezeption,noun,die,,A1,346
+später,später,adjective,,,A1,347
+Taxi,Taxi,noun,das,-s,A1,348
+tschüss,tschüss,adjective,,,A1,349
+unser,unser,pronoun,,,A1,350
+viel,viel,adjective,,,A1,351
+weiter,weiter,adjective,,,A1,352
+wenig,wenig,adjective,,,A1,353
+wir,wir,pronoun,,,A1,354
+zurück,zurück,adjective,,,A1,355
+urteilen,urteilen,verb,,,A1,356
+sche,sche,adjective,,,A1,357
+nikative,nikative,adjective,,,A1,358
+europäischen,europäischen,verb,,,A1,359
+objective,objective,adjective,,,A1,360
+beachten,to consider,verb,,,A1,361
+Schüler,student,noun,der,Schüler,A1,362
+markieren,to mark,verb,,,A1,363
+Orange,Orange (the fruit or the color),noun,die,Orangen,A1,364
+Angebot,offer,noun,das,Angebote,A1,365
+ändern,to change,verb,,,A1,366
+anders,differently,adjective,,,A1,367
+Anfang,beginning,noun,der,Anfänge,A1,368
+Anschluss,Connection,noun,der,Anschlüsse,A1,369
+Antwort,answer,noun,die,Antworten,A1,370
+Anzug,Suit,noun,der,Anzüge,A1,371
+Apfel,apple,noun,der,Äpfel,A1,372
+Apotheke,pharmacy,noun,die,Apotheken,A1,373
+Ahnung,intuition,noun,die,Ahnungen,A1,374
+aktiv,active,adjective,,,A1,375
+aktuell,current,adjective,,,A1,376
+Ampel,traffic light,noun,die,Ampeln,A1,377
+Ausflug,excursion,noun,der,Ausflüge,A1,378
+ausgeben,to spend,verb,,,A1,379
+außer,outside,adjective,,,A1,380
+außerhalb,outside,adjective,,,A1,381
+Ausweis,identity card,noun,der,Ausweise,A1,382
+Autobahn,highway,noun,,,A1,383
+Arbeit,work,noun,die,Arbeiten,A1,384
+Artikel,article (a written piece or a commodity for sale),noun,der,Artikel,A1,385
+aufräumen,to clean up,verb,,,A1,386
+Aufzug,elevator,noun,der,Aufzüge,A1,387
+beenden,to end,verb,,,A1,388
+begründen,to justify,verb,,,A1,389
+beliebt,popular,adjective,,,A1,390
+bequem,comfortable,adjective,,,A1,391
+beraten,to advise,verb,,,A1,392
+Berg,mountain,noun,der,Berge,A1,393
+berichten,to report,verb,,,A1,394
+berühmt,famous,adjective,,,A1,395
+Bescheid,notification,noun,der,Bescheide,A1,396
+Automat,vending machine or automaton,noun,der,Automaten,A1,397
+backen,to bake,verb,,,A1,398
+Bäckerei,bakery,noun,die,Bäckereien,A1,399
+Bahn,to clear a path,verb,,,A1,400
+Bahnsteig,platform (at a train station),noun,der,Bahnsteige,A1,401
+Ball,ball,noun,der,Bälle,A1,402
+Bank,bank (financial institution),noun,die,Banken,A1,403
+Basketball,basketball (the sport or the ball used in the sport),noun,der,Basketbälle,A1,404
+basteln,to tinker,verb,,,A1,405
+Bauch,belly,noun,der,Bäuche,A1,406
+bauen,to build,verb,,,A1,407
+Baum,tree,noun,der,Bäume,A1,408
+Baustelle,construction site,noun,die,Baustellen,A1,409
+blond,blonde,adjective,,,A1,410
+Bluse,blouse,noun,die,Blusen,A1,411
+Bohne,bean (a type of legume,noun,die,Bohnen,A1,412
+brauchen,to need,verb,,,A1,413
+Brot,bread,noun,das,Brote,A1,414
+Brücke,bridge,noun,die,Brücken,A1,415
+buchen,to book,verb,,,A1,416
+bunt,colorful,adjective,,,A1,417
+Büro,office,noun,das,Büros,A1,418
+besonders,especially,adjective,,,A1,419
+bestätigen,to confirm,verb,,,A1,420
+Besuch,visit,noun,der,Besuche,A1,421
+bewölkt,cloudy,adjective,,,A1,422
+Wolke,cloud,noun,die,Wolken,A1,423
+Bier,Beer,noun,das,Biere,A1,424
+Bitte,request,noun,die,Bitten,A1,425
+dauern,to last,verb,,,A1,426
+denken,to think,verb,,,A1,427
+deshalb,therefore,adjective,,,A1,428
+dick,thick,adjective,,,A1,429
+direkt,direct,adjective,,,A1,430
+diskutieren,to discuss,verb,,,A1,431
+doch,however,conjunction,,,A1,432
+dringend,urgent/urgently,adjective,,,A1,433
+drüben,on the other side,verb,,,A1,434
+Café,café,noun,das,Cafés,A1,435
+Cafeteria,cafeteria,noun,die,Cafeterien,A1,436
+Creme,cream (a rich,noun,die,Cremes,A1,437
+damals,at that time,adjective,,,A1,438
+Dame,lady,noun,die,Damen,A1,439
+dass,that,conjunction,,,A1,440
+Zentrum,center,noun,das,Zentren,A1,441
+einverstanden,in agreement,verb,,,A1,442
+einziehen,to move in,verb,,,A1,443
+Ende,end,noun,das,Enden,A1,444
+Drucker,printer (a device that produces printed output),noun,der,Drucker,A1,445
+dumm,stupid,adjective,,,A1,446
+dunkel,dark,adjective,,,A1,447
+dünn,thin,adjective,,,A1,448
+Dusche,shower,noun,die,Duschen,A1,449
+egal,regardless,adjective,,,A1,450
+eigentlich,actually,adjective,,,A1,451
+Eingang,entrance,noun,der,Eingänge,A1,452
+fast,almost,adjective,,,A1,453
+faul,lazy,adjective,,,A1,454
+fernsehen,to watch television,verb,,,A1,455
+Fernseher,television set,noun,der,Fernseher,A1,456
+Fett,fat,noun,das,Fette,A1,457
+Firma,company,noun,die,Firmen,A1,458
+Erfahrung,experience,noun,die,Erfahrungen,A1,459
+erreichen,to reach,verb,,,A1,460
+erst,only,adjective,,,A1,461
+essen,to eat,verb,,,A1,462
+Abfahrt,departure,noun,die,Abfahrten,A1,463
+fallen,to fall,verb,,,A1,464
+Schein,appearance,noun,,,A1,465
+furchtbar,terrible/awful,adjective,,,A1,466
+ganz,whole,adjective,,,A1,467
+Garage,garage,noun,die,Garagen,A1,468
+Garten,garden,verb,,,A1,469
+geehrt,honored,adjective,,,A1,470
+gefährlich,dangerous,adjective,,,A1,471
+fleißig,diligent,adjective,,,A1,472
+Flohmarkt,Flea market,noun,der,Flohmärkte,A1,473
+Flug,flight,noun,der,Flüge,A1,474
+Flugzeug,airplane,noun,das,Flugzeuge,A1,475
+Fluss,river,noun,der,Flüsse,A1,476
+fotografieren,to take a photograph,verb,,,A1,477
+Frage,question,noun,die,Fragen,A1,478
+fragen,to ask,verb,,,A1,479
+freiwillig,voluntary,adjective,,,A1,480
+freundlich,friendly,adjective,,,A1,481
+frisch,fresh,adjective,,,A1,482
+froh,happy,adjective,,,A1,483
+früh,early,adjective,,,A1,484
+gewinnen,to win,verb,,,A1,485
+Gewitter,thunderstorm,noun,das,Gewitter,A1,486
+Gitarre,guitar,noun,die,Gitarren,A1,487
+Gleis,track or railway track,noun,das,Gleise,A1,488
+Wunsch,wish,noun,der,Wünsche,A1,489
+Gruppe,group,noun,die,Gruppen,A1,490
+Gegenteil,opposite,noun,das,Gegenteile,A1,491
+gegenüber,opposite,adjective,,,A1,492
+Geldbörse,wallet,noun,die,Geldbörsen,A1,493
+genau,exactly,adjective,,,A1,494
+genug,enough,adjective,,,A1,495
+Gerät,device,noun,das,Geräte,A1,496
+Gericht,dish,noun,das,Gerichte,A1,497
+Geschäft,business,noun,das,Geschäfte,A1,498
+Gesicht,face,noun,das,Gesichter,A1,499
+Gespräch,conversation,noun,das,Gespräche,A1,500
+beachten,to consider,verb,,,A2,501
+Schüler,student,noun,der,Schüler,A2,502
+markieren,to mark,verb,,,A2,503
+ledig,unmarried,adjective,,,A2,504
+verheiratet,married,adjective,,,A2,505
+Orange,Orange (the fruit or the color),noun,die,Orangen,A2,506
+um,around,preposition,,,A2,507
+einmal,once,adjective,,,A2,508
+Angebot,offer,noun,das,Angebote,A2,509
+ändern,to change,verb,,,A2,510
+anders,differently,adjective,,,A2,511
+anfangen,to start,verb,,,A2,512
+Anfang,beginning,noun,der,Anfänge,A2,513
+Anruf,a phone call,noun,der,Anrufe,A2,514
+Anschluss,Connection,noun,der,Anschlüsse,A2,515
+antworten,to answer,verb,,,A2,516
+Antwort,answer,noun,die,Antworten,A2,517
+Anzeige,Advertisement,noun,die,Anzeigen,A2,518
+Anzug,Suit,noun,der,Anzüge,A2,519
+Apfel,apple,noun,der,Äpfel,A2,520
+Apotheke,pharmacy,noun,die,Apotheken,A2,521
+ab,away from or off,preposition,,,A2,522
+aber,but,conjunction,,,A2,523
+abgeben,to hand in,verb,,,A2,524
+Ahnung,intuition,noun,die,Ahnungen,A2,525
+aktiv,active,adjective,,,A2,526
+aktuell,current,adjective,,,A2,527
+allein,to leave alone,verb,,,A2,528
+also,therefore,adjective,,,A2,529
+Ampel,traffic light,noun,die,Ampeln,A2,530
+an,at,preposition,,,A2,531
+aus,out of,preposition,,,A2,532
+Ausflug,excursion,noun,der,Ausflüge,A2,533
+ausgeben,to spend,verb,,,A2,534
+aussehen,to look,verb,,,A2,535
+außer,outside,adjective,,,A2,536
+außerhalb,outside,adjective,,,A2,537
+Ausweis,identity card,noun,der,Ausweise,A2,538
+Auto,car,noun,das,Autos,A2,539
+Autobahn,highway,noun,,,A2,540
+Arbeit,work,noun,die,Arbeiten,A2,541
+Artikel,article (a written piece or a commodity for sale),noun,der,Artikel,A2,542
+auch,also,adjective,,,A2,543
+aufräumen,to clean up,verb,,,A2,544
+aufstehen,to stand up,verb,,,A2,545
+Aufzug,elevator,noun,der,Aufzüge,A2,546
+Auge,eye (organ of sight),noun,das,Augen,A2,547
+beenden,to end,verb,,,A2,548
+beginnen,to begin,verb,,,A2,549
+begründen,to justify,verb,,,A2,550
+bei,at,preposition,,,A2,551
+Bein,leg,noun,,,A2,552
+bekannt,well-known,adjective,,,A2,553
+beliebt,popular,adjective,,,A2,554
+bequem,comfortable,adjective,,,A2,555
+beraten,to advise,verb,,,A2,556
+Berg,mountain,noun,der,Berge,A2,557
+berichten,to report,verb,,,A2,558
+berühmt,famous,adjective,,,A2,559
+Bescheid,notification,noun,der,Bescheide,A2,560
+Automat,vending machine or automaton,noun,der,Automaten,A2,561
+backen,to bake,verb,,,A2,562
+Bäckerei,bakery,noun,die,Bäckereien,A2,563
+baden,to bathe,verb,,,A2,564
+Bahn,to clear a path,verb,,,A2,565
+Bahnsteig,platform (at a train station),noun,der,Bahnsteige,A2,566
+bald,soon,adjective,,,A2,567
+Balkon,balcony,noun,,,A2,568
+Ball,ball,noun,der,Bälle,A2,569
+Bank,bank (financial institution),noun,die,Banken,A2,570
+Basketball,basketball (the sport or the ball used in the sport),noun,der,Basketbälle,A2,571
+basteln,to tinker,verb,,,A2,572
+Bauch,belly,noun,der,Bäuche,A2,573
+bauen,to build,verb,,,A2,574
+Baum,tree,noun,der,Bäume,A2,575
+Baustelle,construction site,noun,die,Baustellen,A2,576
+bleiben,to stay,verb,,,A2,577
+blond,blonde,adjective,,,A2,578
+Bluse,blouse,noun,die,Blusen,A2,579
+Bohne,bean (a type of legume,noun,die,Bohnen,A2,580
+böse,evil,adjective,,,A2,581
+brauchen,to need,verb,,,A2,582
+Brot,bread,noun,das,Brote,A2,583
+Brücke,bridge,noun,die,Brücken,A2,584
+buchen,to book,verb,,,A2,585
+Buchstabe,letter (a single character or symbol in an alphabet),noun,der,Buchstaben,A2,586
+bunt,colorful,adjective,,,A2,587
+Büro,office,noun,das,Büros,A2,588
+besichtigen,to inspect,verb,,,A2,589
+besonders,especially,adjective,,,A2,590
+bestätigen,to confirm,verb,,,A2,591
+bestellen,to order,verb,,,A2,592
+Besuch,visit,noun,der,Besuche,A2,593
+Bett,bed,noun,das,Betten,A2,594
+bewölkt,cloudy,adjective,,,A2,595
+Wolke,cloud,noun,die,Wolken,A2,596
+Bier,Beer,noun,das,Biere,A2,597
+Bitte,request,noun,die,Bitten,A2,598
+bitter,bitter,adjective,,,A2,599
+dauern,to last,verb,,,A2,600
+denken,to think,verb,,,A2,601
+denn,for,verb,,,A2,602
+deshalb,therefore,adjective,,,A2,603
+dick,thick,adjective,,,A2,604
+direkt,direct,adjective,,,A2,605
+diskutieren,to discuss,verb,,,A2,606
+doch,however,conjunction,,,A2,607
+Dorf,village,noun,das,Dörfer,A2,608
+dort,there,adverb,,,A2,609
+dringend,urgent/urgently,adjective,,,A2,610
+drüben,on the other side,verb,,,A2,611
+drücken,to press,verb,,,A2,612
+Café,café,noun,das,Cafés,A2,613
+Cafeteria,cafeteria,noun,die,Cafeterien,A2,614
+Creme,cream (a rich,noun,die,Cremes,A2,615
+da,there,adjective,,,A2,616
+damals,at that time,adjective,,,A2,617
+Dame,lady,noun,die,Damen,A2,618
+daneben,next to it,verb,,,A2,619
+danken,to thank,verb,,,A2,620
+dann,then,verb,,,A2,621
+dass,that,conjunction,,,A2,622
+Zentrum,center,noun,das,Zentren,A2,623
+einsteigen,to get in,verb,,,A2,624
+Eintritt,admission,noun,der,Eintritte,A2,625
+einverstanden,in agreement,verb,,,A2,626
+sein,to be,verb,,,A2,627
+einziehen,to move in,verb,,,A2,628
+Empfänger,recipient,noun,der,Empfänger,A2,629
+Ende,end,noun,das,Enden,A2,630
+enden,to end,verb,,,A2,631
+Drucker,printer (a device that produces printed output),noun,der,Drucker,A2,632
+dumm,stupid,adjective,,,A2,633
+dunkel,dark,adjective,,,A2,634
+dünn,thin,adjective,,,A2,635
+durch,through,preposition,,,A2,636
+dürfen,to be allowed to,verb,,,A2,637
+Dusche,shower,noun,die,Duschen,A2,638
+Ecke,corner,noun,die,Ecken,A2,639
+egal,regardless,adjective,,,A2,640
+eigentlich,actually,adjective,,,A2,641
+einfach,simple,adjective,,,A2,642
+Eingang,entrance,noun,der,Eingänge,A2,643
+einkaufen,to shop,verb,,,A2,644
+falsch,wrong,adjective,,,A2,645
+Familie,family,noun,die,Familien,A2,646
+Name,name,noun,der,Namen,A2,647
+Farbe,color,noun,die,Farben,A2,648
+fast,almost,adjective,,,A2,649
+faul,lazy,adjective,,,A2,650
+fehlen,to be missing,verb,,,A2,651
+Fehler,mistake,noun,der,Fehler,A2,652
+feiern,to celebrate,verb,,,A2,653
+fernsehen,to watch television,verb,,,A2,654
+Fernseher,television set,noun,der,Fernseher,A2,655
+Fett,fat,noun,das,Fette,A2,656
+Film,film,noun,der,Filme,A2,657
+finden,to find,verb,,,A2,658
+Firma,company,noun,die,Firmen,A2,659
+Erfahrung,experience,noun,die,Erfahrungen,A2,660
+erlauben,to allow,verb,,,A2,661
+erreichen,to reach,verb,,,A2,662
+erst,only,adjective,,,A2,663
+essen,to eat,verb,,,A2,664
+Abfahrt,departure,noun,die,Abfahrten,A2,665
+fallen,to fall,verb,,,A2,666
+frühstücken,to have breakfast,verb,,,A2,667
+Schein,appearance,noun,,,A2,668
+Führung,leadership,noun,die,Führungen,A2,669
+furchtbar,terrible/awful,adjective,,,A2,670
+ganz,whole,adjective,,,A2,671
+Garage,garage,noun,die,Garagen,A2,672
+Garten,garden,verb,,,A2,673
+Gast,guest,noun,der,Gäste,A2,674
+geehrt,honored,adjective,,,A2,675
+gefährlich,dangerous,adjective,,,A2,676
+gefallen,to please,verb,,,A2,677
+fleißig,diligent,adjective,,,A2,678
+Flohmarkt,Flea market,noun,der,Flohmärkte,A2,679
+Flug,flight,noun,der,Flüge,A2,680
+Flugzeug,airplane,noun,das,Flugzeuge,A2,681
+Fluss,river,noun,der,Flüsse,A2,682
+Formular,Form,noun,das,Formulare,A2,683
+fotografieren,to take a photograph,verb,,,A2,684
+Frage,question,noun,die,Fragen,A2,685
+fragen,to ask,verb,,,A2,686
+Frau,woman,noun,die,Frauen,A2,687
+freiwillig,voluntary,adjective,,,A2,688
+fremd,foreign,adjective,,,A2,689
+Freund,friend,noun,der,Freunde,A2,690
+freundlich,friendly,adjective,,,A2,691
+frisch,fresh,adjective,,,A2,692
+froh,happy,adjective,,,A2,693
+früh,early,adjective,,,A2,694
+gewinnen,to win,verb,,,A2,695
+Gewitter,thunderstorm,noun,das,Gewitter,A2,696
+Gitarre,guitar,noun,die,Gitarren,A2,697
+glauben,to believe,verb,,,A2,698
+gleich,same,adjective,,,A2,699
+Gleis,track or railway track,noun,das,Gleise,A2,700
+glücklich,happy,adjective,,,A2,701
+Wunsch,wish,noun,der,Wünsche,A2,702
+grillen,to grill,verb,,,A2,703
+groß,big,adjective,,,A2,704
+Gruppe,group,noun,die,Gruppen,A2,705
+Gruß,greeting,noun,der,Grüße,A2,706
+günstig,favorable,adjective,,,A2,707
+Haar,hair (referring to a single strand or the collective mass of hair on the head or body),noun,das,Haare,A2,708
+haben,to have,verb,,,A2,709
+Gegenteil,opposite,noun,das,Gegenteile,A2,710
+gegenüber,opposite,adjective,,,A2,711
+gehen,to go,verb,,,A2,712
+Geldbörse,wallet,noun,die,Geldbörsen,A2,713
+genau,exactly,adjective,,,A2,714
+genug,enough,adjective,,,A2,715
+gerade,straight,adjective,,,A2,716
+Gerät,device,noun,das,Geräte,A2,717
+Gericht,dish,noun,das,Gerichte,A2,718
+Geschäft,business,noun,das,Geschäfte,A2,719
+Geschenk,gift,noun,das,Geschenke,A2,720
+Gesicht,face,noun,das,Gesichter,A2,721
+Gespräch,conversation,noun,das,Gespräche,A2,722
+gestern,yesterday,verb,,,A2,723
+gesund,healthy,adjective,,,A2,724
+Getränk,drink,noun,das,Getränke,A2,725
+Herd,Stove or cooking range,noun,der,Herde,A2,726
+herstellen,to produce,verb,,,A2,727
+heute,today,adverb,,,A2,728
+hinten,at/in the back,verb,,,A2,729
+Hobby,hobby,noun,das,Hobbys,A2,730
+hoch,high,adjective,,,A2,731
+Hochzeit,wedding,noun,die,Hochzeiten,A2,732
+hoffen,to hope,verb,,,A2,733
+hoffentlich,hopefully,adjective,,,A2,734
+Hotel,hotel,noun,das,Hotels,A2,735
+Husten,to cough (to expel air from the lungs suddenly and loudly,verb,,,A2,736
+Halle,hall,noun,die,Hallen,A2,737
+Hals,neck,noun,der,Hälse,A2,738
+halten,to hold,verb,,,A2,739
+Haltestelle,bus stop,noun,die,Haltestellen,A2,740
+Hand,hand (a body part at the end of the arm),noun,die,Hände,A2,741
+hängen,to hang,verb,,,A2,742
+hart,hard,adjective,,,A2,743
+hässlich,ugly,adjective,,,A2,744
+Hauptstadt,capital city,noun,die,Hauptstädte,A2,745
+Haushalt,household,noun,der,Haushalte,A2,746
+heiraten,to marry,verb,,,A2,747
+heißen,to be called,verb,,,A2,748
+hell,bright,adjective,,,A2,749
+Hemd,shirt,noun,das,Hemden,A2,750
+Junge,boy,noun,der,Jungen,A2,751
+Kaffee,coffee,noun,der,Kaffees,A2,752
+Kalender,calendar,noun,der,Kalender,A2,753
+kalt,cold,adjective,,,A2,754
+Kamera,camera,noun,die,Kameras,A2,755
+kaputt,broken,adjective,,,A2,756
+Karte,card,noun,die,Karten,A2,757
+Kartoffel,potato,noun,die,Kartoffeln,A2,758
+Kasse,cash register,noun,die,Kassen,A2,759
+kaufen,to buy,verb,,,A2,760
+kennen,to know,verb,,,A2,761
+kennenlernen,to get to know,verb,,,A2,762
+Kette,chain,noun,die,Ketten,A2,763
+Idee,idea,noun,die,Ideen,A2,764
+immer,always,adverb,,,A2,765
+in,in,preposition,,,A2,766
+informieren,to inform,verb,,,A2,767
+Insel,island,noun,die,Inseln,A2,768
+intelligent,intelligent,adjective,,,A2,769
+Interesse,interest,noun,das,Interessen,A2,770
+interessiert,interested,adjective,,,A2,771
+interessant,interesting,adjective,,,A2,772
+international,international,adjective,,,A2,773
+Interview,An interview,noun,das,Interviews,A2,774
+ja,yes,adjective,,,A2,775
+Jacke,jacket,noun,die,Jacken,A2,776
+jeder,each,adjective,,,A2,777
+jetzt,now,adjective,,,A2,778
+kostenlos,free,adjective,,,A2,779
+krank,ill,adjective,,,A2,780
+Haus,house,noun,das,Häuser,A2,781
+Kredit,credit,noun,der,Kredite,A2,782
+Kreuzung,Crossroads,noun,die,Kreuzungen,A2,783
+kriegen,to get,verb,,,A2,784
+Krimi,crime novel,noun,der,Krimis,A2,785
+Küche,kitchen,noun,die,Küchen,A2,786
+Kuchen,cake,verb,,,A2,787
+kühl,cool,adjective,,,A2,788
+Schrank,cabinet or wardrobe,noun,der,Schränke,A2,789
+Kultur,culture,noun,die,Kulturen,A2,790
+Kunde,customer,noun,der,Kunden,A2,791
+kündigen,to terminate,verb,,,A2,792
+Kunst,Art,noun,die,Künste,A2,793
+Kurs,course,noun,der,Kurse,A2,794
+kurz,short,adjective,,,A2,795
+lachen,to laugh,verb,,,A2,796
+Laden,to load,verb,,,A2,797
+Lampe,lamp,noun,die,Lampen,A2,798
+Land,country,noun,das,Länder,A2,799
+Kiosk,kiosk,noun,der,Kioske,A2,800
+Kirche,church,noun,die,Kirchen,A2,801
+klappen,to succeed,verb,,,A2,802
+Klavier,piano,noun,das,Klaviere,A2,803
+Kleid,dress,noun,das,Kleider,A2,804
+klein,small,adjective,,,A2,805
+klug,clever,adjective,,,A2,806
+kochen,to cook,verb,,,A2,807
+komisch,strange,adjective,,,A2,808
+kommen,to come,verb,,,A2,809
+können,to be able to,verb,,,A2,810
+Kontakt,contact,noun,der,Kontakte,A2,811
+Konto,account (financial or banking account),noun,das,Konten,A2,812
+kontrollieren,to control,verb,,,A2,813
+Konzert,concert,noun,das,Konzerte,A2,814
+Körper,body,noun,der,Körper,A2,815
+kosten,to cost,verb,,,A2,816
+links,on/to the left,adjective,,,A2,817
+Löffel,spoon,noun,der,Löffel,A2,818
+lügen,to lie,verb,,,A2,819
+Mädchen,girl,verb,,,A2,820
+Magen,stomach,verb,,,A2,821
+malen,to paint,verb,,,A2,822
+manchmal,sometimes,adjective,,,A2,823
+Mann,man (a male adult human being),noun,,,A2,824
+männlich,masculine,adjective,,,A2,825
+Markt,market,noun,der,Märkte,A2,826
+Maschine,machine,noun,die,Maschinen,A2,827
+Meer,sea,noun,das,Meere,A2,828
+mehr,more,adjective,,,A2,829
+Meinung,opinion,noun,die,Meinungen,A2,830
+meist,most,adjective,,,A2,831
+langweilig,boring,adjective,,,A2,832
+laufen,to run,verb,,,A2,833
+laut,loudly/loud,adjective,,,A2,834
+Leben,to live,verb,,,A2,835
+leer,empty,adjective,,,A2,836
+legen,to lay or to put,verb,,,A2,837
+leicht,easy,adjective,,,A2,838
+leider,unfortunately,adjective,,,A2,839
+leise,quiet,adjective,,,A2,840
+lesen,to read,verb,,,A2,841
+lieb,dear,adjective,,,A2,842
+Lied,song,noun,das,Lieder,A2,843
+liefern,to deliver,verb,,,A2,844
+liegen,to lie,verb,,,A2,845
+Moment,moment (a brief period of time or a particular instant),noun,der,Momente,A2,846
+Motor,engine,noun,der,Motoren,A2,847
+müde,tired,adjective,,,A2,848
+Mund,mouth,noun,der,Münder,A2,849
+Museum,museum,noun,das,Museen,A2,850
+müssen,to have to,verb,,,A2,851
+nach,after,preposition,,,A2,852
+Nachbar,neighbor,noun,der,Nachbarn,A2,853
+Nachricht,message,noun,die,Nachrichten,A2,854
+nass,wet,adjective,,,A2,855
+natürlich,naturally,adjective,,,A2,856
+neben,to coordinate or place alongside,verb,,,A2,857
+nebenan,next door,verb,,,A2,858
+neblig,foggy,adjective,,,A2,859
+Menge,quantity,noun,die,Mengen,A2,860
+Mensch,human being,noun,der,Menschen,A2,861
+merken,to notice,verb,,,A2,862
+Messer,knife,noun,das,Messer,A2,863
+mieten,to rent,verb,,,A2,864
+mindestens,at least,adjective,,,A2,865
+Mitarbeiter,employee,noun,der,Mitarbeiter,A2,866
+Mitte,center,noun,die,Mitten,A2,867
+modern,to modernize,verb,,,A2,868
+mögen,to like,verb,,,A2,869
+möglich,possible,adjective,,,A2,870
+öffnen,to open,verb,,,A2,871
+ohne,without,preposition,,,A2,872
+Ordnung,order,noun,die,Ordnungen,A2,873
+organisieren,to organize,verb,,,A2,874
+Paar,pair,noun,das,Paare,A2,875
+packen,to pack,verb,,,A2,876
+Papier,paper (material used for writing or printing),noun,das,Papiere,A2,877
+Parfüm,perfume,noun,das,Parfüms,A2,878
+Park,park,noun,der,Parks,A2,879
+Partner,partner (a person who shares an activity or business with another),noun,der,Partner,A2,880
+Party,party,noun,die,Partys or Parties,A2,881
+Pass,passport,noun,der,Pässe,A2,882
+passen,to fit,verb,,,A2,883
+nein,no,verb,,,A2,884
+nennen,to name,verb,,,A2,885
+nervös,nervous,adjective,,,A2,886
+nett,nice,adjective,,,A2,887
+nicht,Not,adjective,,,A2,888
+nichts,nothing,adjective,,,A2,889
+niemand,nobody,adjective,,,A2,890
+nirgends,nowhere,adjective,,,A2,891
+noch,still,adjective,,,A2,892
+normal,normal,adjective,,,A2,893
+Note,note,noun,die,Noten,A2,894
+notieren,to note,verb,,,A2,895
+Notiz,note,noun,die,Notizen,A2,896
+notwendig,necessary,adjective,,,A2,897
+Nummer,number,noun,die,Nummern,A2,898
+nützlich,useful,adjective,,,A2,899
+oben,above,verb,,,A2,900
+Projekt,project,noun,das,Projekte,A2,901
+Prospekt,brochure,noun,der,Prospekte,A2,902
+prüfen,to check,verb,,,A2,903
+Prüfung,examination or test,noun,die,Prüfungen,A2,904
+Pullover,sweater,noun,der,Pullover,A2,905
+pünktlich,on time,adjective,,,A2,906
+putzen,to clean,verb,,,A2,907
+Qualität,quality,noun,die,Qualitäten,A2,908
+Radio,Radio (device for receiving and playing back broadcast audio signals),noun,das,Radios,A2,909
+raten,to advise,verb,,,A2,910
+Rathaus,city hall,noun,das,Rathäuser,A2,911
+Rätsel,riddle,noun,das,Rätsel,A2,912
+Raum,room,noun,der,Räume,A2,913
+rechnen,to calculate,verb,,,A2,914
+Rechnung,bill,noun,die,Rechnungen,A2,915
+rechts,to the right,adjective,,,A2,916
+reden,to talk,verb,,,A2,917
+regnen,to rain,verb,,,A2,918
+reich,rich,adjective,,,A2,919
+Reifen,to ripen,verb,,,A2,920
+Reihe,row,noun,die,Reihen,A2,921
+Reinigung,Cleaning or dry cleaner's (a place where clothes are cleaned),noun,die,Reinigungen,A2,922
+Pause,break,noun,die,Pausen,A2,923
+Person,person,noun,,,A2,924
+Pflanze,plant,noun,die,Pflanzen,A2,925
+Pizza,Pizza,noun,die,Pizzen,A2,926
+Plakat,poster,noun,das,Plakate,A2,927
+Plan,to plan,verb,,,A2,928
+planen,to plan,verb,,,A2,929
+Platz,place,noun,der,Plätze,A2,930
+plötzlich,suddenly,adjective,,,A2,931
+Portion,to portion out,verb,,,A2,932
+Zahl,number,noun,die,Zahlen,A2,933
+Praktikum,internship,noun,das,Praktika,A2,934
+praktisch,practical,adjective,,,A2,935
+Praxis,medical practice or doctor's office,noun,die,Praxen,A2,936
+Preis,price,noun,der,Preise,A2,937
+preiswert,affordable,adjective,,,A2,938
+privat,private,adjective,,,A2,939
+Produkt,product,noun,das,Produkte,A2,940
+Programm,program,noun,das,Programme,A2,941
+rund,round,adjective,,,A2,942
+Sache,thing,noun,die,Sachen,A2,943
+sammeln,to collect,verb,,,A2,944
+Satz,sentence,noun,der,Sätze,A2,945
+sauer,sour,adjective,,,A2,946
+schade,too bad,adjective,,,A2,947
+schädlich,harmful,adjective,,,A2,948
+schaffen,to create,verb,,,A2,949
+scharf,sharp,adjective,,,A2,950
+scheinen,to seem,verb,,,A2,951
+Schere,scissors,noun,die,Scheren,A2,952
+schicken,to send,verb,,,A2,953
+Schiff,ship,noun,das,Schiffe,A2,954
+schimpfen,to scold,verb,,,A2,955
+Schirm,umbrella,noun,der,Schirme,A2,956
+schlafen,to sleep,verb,,,A2,957
+Reise,journey,noun,die,Reisen,A2,958
+Reisebüro,travel agency,noun,das,Reisebüros,A2,959
+reisen,to travel,verb,,,A2,960
+Reparatur,repair,noun,die,Reparaturen,A2,961
+reparieren,to repair,verb,,,A2,962
+reservieren,to reserve,verb,,,A2,963
+Rest,remainder,noun,der,Reste,A2,964
+Restaurant,restaurant,noun,das,Restaurants,A2,965
+Rezept,recipe,noun,das,Rezepte,A2,966
+riechen,to smell,verb,,,A2,967
+Rind,cattle,noun,das,Rinder,A2,968
+Ring,ring (a circular band worn on the finger,noun,der,Ringe,A2,969
+Rock,skirt,noun,der,Röcke,A2,970
+Rose,rose (a type of flowering plant),noun,die,Rosen,A2,971
+Rücken,to move or shift,verb,,,A2,972
+Rucksack,backpack,noun,der,Rucksäcke,A2,973
+rufen,to call,verb,,,A2,974
+ruhig,calm/quiet,adjective,,,A2,975
+schwach,weak,adjective,,,A2,976
+schwierig,difficult,adjective,,,A2,977
+schwimmen,to swim,verb,,,A2,978
+sehen,to see,verb,,,A2,979
+Seife,soap,noun,die,Seifen,A2,980
+seit,since,preposition,,,A2,981
+Seite,side,noun,die,Seiten,A2,982
+selbst,oneself,adjective,,,A2,983
+Sendung,broadcast,noun,die,Sendungen,A2,984
+schlecht,bad,adjective,,,A2,985
+schließen,to close,verb,,,A2,986
+schlimm,bad,adjective,,,A2,987
+Schloss,castle,noun,das,Schlösser,A2,988
+Schluss,end,noun,der,Schlüsse,A2,989
+Schlüssel,key (a device used to operate a lock),noun,der,Schlüssel,A2,990
+schmutzig,dirty,adjective,,,A2,991
+schneien,to snow,verb,,,A2,992
+Schokolade,chocolate,noun,die,Schokoladen,A2,993
+schrecklich,terrible/awful,adjective,,,A2,994
+schreiben,to write,verb,,,A2,995
+schriftlich,in writing/written,adjective,,,A2,996
+Schule,school,noun,die,Schulen,A2,997
+spielen,to play,verb,,,A2,998
+sportlich,sporty,adjective,,,A2,999
+Sprache,language,noun,die,Sprachen,A2,1000
+Schüler,student,noun,der,Schüler,B1,1001
+parken,to park,verb,,,B1,1002
+parkieren,to park,verb,,,B1,1003
+Treppe,staircase,noun,die,Treppen,B1,1004
+Stiege,staircase,noun,die,Stiegen,B1,1005
+Aufgabe,task,noun,die,Aufgaben,B1,1006
+Anzeige,Advertisement,noun,die,Anzeigen,B1,1007
+richtig,correct,adjective,,,B1,1008
+Durchsage,announcement,noun,die,Durchsagen,B1,1009
+lösen,to solve,verb,,,B1,1010
+Lösung,solution,noun,die,Lösungen,B1,1011
+Präsentation,to present (to introduce or display something formally),verb,,,B1,1012
+Punkt,point,noun,der,Punkte,B1,1013
+hell,bright,adjective,,,B1,1014
+Orange,Orange (the fruit or the color),noun,die,Orangen,B1,1015
+einmal,once,adjective,,,B1,1016
+einfach,simple,adjective,,,B1,1017
+Stunde,hour,noun,die,Stunden,B1,1018
+abschreiben,to copy,verb,,,B1,1019
+ablehnen,to reject,verb,,,B1,1020
+abmachen,to remove,verb,,,B1,1021
+abnehmen,to lose weight,verb,,,B1,1022
+abonnieren,to subscribe,verb,,,B1,1023
+absagen,to cancel,verb,,,B1,1024
+ab,away from or off,preposition,,,B1,1025
+absolut,absolute,adjective,,,B1,1026
+abstimmen,to vote,verb,,,B1,1027
+abwärts,downwards,adjective,,,B1,1028
+abwaschen,to wash off,verb,,,B1,1029
+abwesend,absent,adjective,,,B1,1030
+achten,to pay attention,verb,,,B1,1031
+abbiegen,to turn off or change direction,verb,,,B1,1032
+aber,but,conjunction,,,B1,1033
+abfahren,to depart,verb,,,B1,1034
+abgeben,to hand in,verb,,,B1,1035
+abhängen,to depend on,verb,,,B1,1036
+abhängig,dependent,adjective,,,B1,1037
+abheben,to withdraw,verb,,,B1,1038
+abholen,to pick up,verb,,,B1,1039
+wichtig,important,adjective,,,B1,1040
+gehen,to go,verb,,,B1,1041
+alltäglich,everyday,adjective,,,B1,1042
+also,therefore,adjective,,,B1,1043
+alternativ,alternative,adjective,,,B1,1044
+sich amüsieren,to have a good time,verb,,,B1,1045
+an,at,preposition,,,B1,1046
+analysieren,to analyze,verb,,,B1,1047
+anbieten,to offer,verb,,,B1,1048
+ähnlich,similar,adjective,,,B1,1049
+aktiv,active,adjective,,,B1,1050
+aktuell,current,adjective,,,B1,1051
+akzeptieren,to accept,verb,,,B1,1052
+allein,to leave alone,verb,,,B1,1053
+allerdings,however,adjective,,,B1,1054
+allgemein,general,adjective,,,B1,1055
+langweilig,boring,adjective,,,B1,1056
+helfen,to help,verb,,,B1,1057
+reinigen,to clean,verb,,,B1,1058
+kochen,to cook,verb,,,B1,1059
+ängstlich,anxious,adjective,,,B1,1060
+anhaben,to wear,verb,,,B1,1061
+anklicken,to click on,verb,,,B1,1062
+ankommen,to arrive,verb,,,B1,1063
+ankündigen,to announce,verb,,,B1,1064
+anmelden,to register,verb,,,B1,1065
+annehmen,to accept,verb,,,B1,1066
+anrufen,to call,verb,,,B1,1067
+andererseits,on the other hand,adjective,,,B1,1068
+ändern,to change,verb,,,B1,1069
+anders,differently,adjective,,,B1,1070
+anerkennen,to recognize,verb,,,B1,1071
+anfangen,to start,verb,,,B1,1072
+anfangs,initially,adjective,,,B1,1073
+angeben,to specify,verb,,,B1,1074
+angenehm,pleasant,adjective,,,B1,1075
+meinen,to mean,verb,,,B1,1076
+vergessen,to forget,verb,,,B1,1077
+dagegen,to oppose,verb,,,B1,1078
+anzeigen,to indicate,verb,,,B1,1079
+sich anziehen,to get dressed,verb,,,B1,1080
+arbeiten,to work,verb,,,B1,1081
+arbeitslos,unemployed,adjective,,,B1,1082
+anschaffen,to acquire,verb,,,B1,1083
+anschließen,to connect,verb,,,B1,1084
+anschnallen,to buckle up,verb,,,B1,1085
+ansehen,to look at,verb,,,B1,1086
+ansprechen,to address,verb,,,B1,1087
+anstellen,to hire,verb,,,B1,1088
+sich anstrengen,to make an effort,verb,,,B1,1089
+anstrengend,tiring,adjective,,,B1,1090
+anwenden,to apply,verb,,,B1,1091
+anwesend,present,adjective,,,B1,1092
+antworten,to answer,verb,,,B1,1093
+sprechen,to speak,verb,,,B1,1094
+bekommen,to receive,verb,,,B1,1095
+bei,at,preposition,,,B1,1096
+haben,to have,verb,,,B1,1097
+auffallen,to stand out,verb,,,B1,1098
+auffordern,to request,verb,,,B1,1099
+aufführen,to perform,verb,,,B1,1100
+aufgeben,to give up,verb,,,B1,1101
+aufhalten,to stop,verb,,,B1,1102
+aufheben,to lift up,verb,,,B1,1103
+aufhören,to stop,verb,,,B1,1104
+aufladen,to charge,verb,,,B1,1105
+auflösen,to dissolve,verb,,,B1,1106
+aufmerksam,attentive,adjective,,,B1,1107
+aufnehmen,to record,verb,,,B1,1108
+sich ärgern,to be annoyed,verb,,,B1,1109
+ärgerlich,annoying,adjective,,,B1,1110
+atmen,to breathe,verb,,,B1,1111
+auch,also,adjective,,,B1,1112
+schließen,to close,verb,,,B1,1113
+ausgebildet,trained,adjective,,,B1,1114
+ausdrucken,to print out,verb,,,B1,1115
+auseinander,apart,adjective,,,B1,1116
+ausfallen,to fail,verb,,,B1,1117
+ausfüllen,to fill out,verb,,,B1,1118
+ausgeben,to spend,verb,,,B1,1119
+ausgezeichnet,excellent,adjective,,,B1,1120
+aufpassen,to pay attention,verb,,,B1,1121
+aufräumen,to clean up,verb,,,B1,1122
+aufregen,to get excited or upset,verb,,,B1,1123
+aufstehen,to stand up,verb,,,B1,1124
+auftreten,to occur,verb,,,B1,1125
+aufwachen,to wake up,verb,,,B1,1126
+aufwärts,upwards,adjective,,,B1,1127
+aus,out of,preposition,,,B1,1128
+Land,country,noun,das,Länder,B1,1129
+aussprechen,to pronounce,verb,,,B1,1130
+ausstellen,to exhibit,verb,,,B1,1131
+auswählen,to select,verb,,,B1,1132
+ausziehen,to move out,verb,,,B1,1133
+automatisch,automatically,adjective,,,B1,1134
+ausländisch,foreign,adjective,,,B1,1135
+ausmachen,to turn off,verb,,,B1,1136
+ausreichen,to be sufficient,verb,,,B1,1137
+ausreichend,sufficient,adjective,,,B1,1138
+ausrichten,to align,verb,,,B1,1139
+sich ausruhen,to rest,verb,,,B1,1140
+ausschließen,to exclude,verb,,,B1,1141
+ausschließlich,exclusively,adjective,,,B1,1142
+aussehen,to look,verb,,,B1,1143
+außen,outside,verb,,,B1,1144
+außerhalb,outside,adjective,,,B1,1145
+äußerlich,external,adjective,,,B1,1146
+außer,outside,adjective,,,B1,1147
+außerdem,in addition,adjective,,,B1,1148
+basteln,to tinker,verb,,,B1,1149
+bauen,to build,verb,,,B1,1150
+beachten,to consider,verb,,,B1,1151
+beantragen,to apply for,verb,,,B1,1152
+beantworten,to answer,verb,,,B1,1153
+sich bedanken,to express thanks,verb,,,B1,1154
+bedeuten,to mean,verb,,,B1,1155
+backen,to bake,verb,,,B1,1156
+baden,to bathe,verb,,,B1,1157
+bald,soon,adjective,,,B1,1158
+möglich,possible,adjective,,,B1,1159
+tanzen,to dance,verb,,,B1,1160
+zahlen,to pay,verb,,,B1,1161
+behaupten,to claim,verb,,,B1,1162
+behindern,to hinder,verb,,,B1,1163
+beinahe,almost,adjective,,,B1,1164
+beißen,to bite,verb,,,B1,1165
+bekannt,well-known,adjective,,,B1,1166
+bedienen,to serve,verb,,,B1,1167
+sich beeilen,to hurry,verb,,,B1,1168
+beenden,to end,verb,,,B1,1169
+sich befinden,to be located,verb,,,B1,1170
+befreit,liberated,adjective,,,B1,1171
+befriedigend,satisfactory,adjective,,,B1,1172
+begegnen,to meet,verb,,,B1,1173
+begeistert,enthusiastic,adjective,,,B1,1174
+beginnen,to begin,verb,,,B1,1175
+begleiten,to accompany,verb,,,B1,1176
+begrenzt,limited,adjective,,,B1,1177
+begründen,to justify,verb,,,B1,1178
+begrüßen,to greet,verb,,,B1,1179
+behalten,to keep,verb,,,B1,1180
+behandeln,to treat,verb,,,B1,1181
+stören,to disturb,verb,,,B1,1182
+einverstanden,in agreement,verb,,,B1,1183
+nicht,Not,adjective,,,B1,1184
+machen,to make,verb,,,B1,1185
+berichten,to report,verb,,,B1,1186
+beruflich,professionally,adjective,,,B1,1187
+berufstätig,employed,adjective,,,B1,1188
+beruhigen,to calm down,verb,,,B1,1189
+berühmt,famous,adjective,,,B1,1190
+beschädigen,to damage,verb,,,B1,1191
+beschäftigen,to occupy,verb,,,B1,1192
+beschließen,to decide,verb,,,B1,1193
+beschränken,to limit or restrict,verb,,,B1,1194
+beschreiben,to describe,verb,,,B1,1195
+sich beschweren,to complain,verb,,,B1,1196
+beleidigen,to insult,verb,,,B1,1197
+beliebt,popular,adjective,,,B1,1198
+bemerken,to notice,verb,,,B1,1199
+sich bemühen,to make an effort,verb,,,B1,1200
+benötigen,to need,verb,,,B1,1201
+benutzen,to use,verb,,,B1,1202
+beobachten,to observe,verb,,,B1,1203
+bequem,comfortable,adjective,,,B1,1204
+beraten,to advise,verb,,,B1,1205
+berechnen,to calculate,verb,,,B1,1206
+bereit,ready,adjective,,,B1,1207
+bereits,already,adjective,,,B1,1208
+sich beteiligen,to participate,verb,,,B1,1209
+betreuen,to supervise,verb,,,B1,1210
+betrügen,to deceive,verb,,,B1,1211
+betrunken,drunk,verb,,,B1,1212
+bevor,before,adjective,,,B1,1213
+bewegen,to move or to motivate,verb,,,B1,1214
+beweisen,to prove,verb,,,B1,1215
+sich bewerben,to apply (for a job or position),verb,,,B1,1216
+besetzen,to occupy,verb,,,B1,1217
+besichtigen,to inspect,verb,,,B1,1218
+besitzen,to own,verb,,,B1,1219
+besonders,especially,adjective,,,B1,1220
+besorgen,to procure,verb,,,B1,1221
+besprechen,to discuss,verb,,,B1,1222
+bestätigen,to confirm,verb,,,B1,1223
+bestehen,to exist,verb,,,B1,1224
+bestellen,to order,verb,,,B1,1225
+bestimmt,certain,adjective,,,B1,1226
+bestrafen,to punish,verb,,,B1,1227
+besuchen,to visit,verb,,,B1,1228
+verlieren,to lose,verb,,,B1,1229
+Haus,house,noun,das,Häuser,B1,1230
+Bitte,request,noun,die,Bitten,B1,1231
+bitter,bitter,adjective,,,B1,1232
+blass,pale,adjective,,,B1,1233
+bleiben,to stay,verb,,,B1,1234
+blind,blind,adjective,,,B1,1235
+blitzen,to flash,verb,,,B1,1236
+blond,blonde,adjective,,,B1,1237
+bloß,merely,adjective,,,B1,1238
+blühen,to bloom,verb,,,B1,1239
+bluten,to bleed,verb,,,B1,1240
+bezahlen,to pay,verb,,,B1,1241
+bieten,to offer,verb,,,B1,1242
+billig,cheap,adjective,,,B1,1243
+bisher,until now or so far,adjective,,,B1,1244
+bitten,to ask,verb,,,B1,1245
+kaufen,to buy,verb,,,B1,1246
+bringen,to bring,verb,,,B1,1247
+buchen,to book,verb,,,B1,1248
+böse,evil,adjective,,,B1,1249
+Braten,to roast,verb,,,B1,1250
+brauchen,to need,verb,,,B1,1251
+brechen,to break,verb,,,B1,1252
+breit,wide,adjective,,,B1,1253
+bremsen,to brake,verb,,,B1,1254
+brennen,to burn,verb,,,B1,1255
+mieten,to rent,verb,,,B1,1256
+kommen,to come,verb,,,B1,1257
+sein,to be,verb,,,B1,1258
+da,there,adjective,,,B1,1259
+dabei,at the same time,adjective,,,B1,1260
+dafür,for it,adjective,,,B1,1261
+daher,therefore,adjective,,,B1,1262
+dahin,to go,verb,,,B1,1263
+buchstabieren,to spell,verb,,,B1,1264
+bunt,colorful,adjective,,,B1,1265
+lassen,to let,verb,,,B1,1266
+losfahren,to drive off,verb,,,B1,1267
+dauern,to last,verb,,,B1,1268
+dauernd,continually,adjective,,,B1,1269
+dekorieren,to decorate,verb,,,B1,1270
+denken,to think,verb,,,B1,1271
+denn,for,verb,,,B1,1272
+derselbe,the same,adjective,,,B1,1273
+deshalb,therefore,adjective,,,B1,1274
+deswegen,therefore,verb,,,B1,1275
+damals,at that time,adjective,,,B1,1276
+damit,with it,conjunction,,,B1,1277
+danach,after that,adjective,,,B1,1278
+daneben,next to it,verb,,,B1,1279
+danken,to thank,verb,,,B1,1280
+dankbar,grateful,adjective,,,B1,1281
+danke,thank you,adjective,,,B1,1282
+dann,then,verb,,,B1,1283
+darstellen,to represent,verb,,,B1,1284
+dass,that,conjunction,,,B1,1285
+interessant,interesting,adjective,,,B1,1286
+sammeln,to collect,verb,,,B1,1287
+lernen,to learn,verb,,,B1,1288
+diskutieren,to discuss,verb,,,B1,1289
+doch,however,conjunction,,,B1,1290
+donnern,to thunder (the act of thunder occurring),verb,,,B1,1291
+doppelt,double,adjective,,,B1,1292
+dort,there,adverb,,,B1,1293
+dorthin,to there,verb,,,B1,1294
+draußen,outside,verb,,,B1,1295
+deutlich,clearly,adjective,,,B1,1296
+dicht,dense,adjective,,,B1,1297
+dick,thick,adjective,,,B1,1298
+dienen,to serve,verb,,,B1,1299
+diesmal,this time,adjective,,,B1,1300
+digital,digital,adjective,,,B1,1301
+direkt,direct,adjective,,,B1,1302
+schon,to spare,verb,,,B1,1303
+essen,to eat,verb,,,B1,1304
+durcheinander,in a mess,adjective,,,B1,1305
+durchschnittlich,average,adjective,,,B1,1306
+dürfen,to be allowed to,verb,,,B1,1307
+durstig,thirsty,adjective,,,B1,1308
+sich duschen,to take a shower,verb,,,B1,1309
+duzen,to address someone informally using du,verb,,,B1,1310
+eben,to level,verb,,,B1,1311
+ebenfalls,also,adjective,,,B1,1312
+ebenso,equally,adjective,,,B1,1313
+drehen,to turn,verb,,,B1,1314
+dringend,urgent/urgently,adjective,,,B1,1315
+drin,in it,verb,,,B1,1316
+drüben,on the other side,verb,,,B1,1317
+drucken,to print,verb,,,B1,1318
+drücken,to press,verb,,,B1,1319
+dumm,stupid,adjective,,,B1,1320
+dunkel,dark,adjective,,,B1,1321
+dünn,thin,adjective,,,B1,1322
+durch,through,preposition,,,B1,1323
+mit,with,preposition,,,B1,1324
+eilen,to hurry,verb,,,B1,1325
+eilig,urgent,adjective,,,B1,1326
+einbrechen,to break in,verb,,,B1,1327
+eindeutig,clear,adjective,,,B1,1328
+einerseits,on the one hand,adjective,,,B1,1329
+einfallen,to occur to someone,verb,,,B1,1330
+e-card,electronic card,adjective,,,B1,1331
+eckig,angular,adjective,,,B1,1332
+egal,regardless,adjective,,,B1,1333
+eher,rather,adjective,,,B1,1334
+ehrlich,honest,adjective,,,B1,1335
+eigentlich,actually,adjective,,,B1,1336
+sich eignen,to be suitable,verb,,,B1,1337
+schwimmen,to swim,verb,,,B1,1338
+einpacken,to pack,verb,,,B1,1339
+einrichten,to set up,verb,,,B1,1340
+einsam,lonely,adjective,,,B1,1341
+einschalten,to turn on,verb,,,B1,1342
+einschließlich,including,adjective,,,B1,1343
+einsetzen,to insert,verb,,,B1,1344
+einsteigen,to get in,verb,,,B1,1345
+einstellen,to adjust,verb,,,B1,1346
+eintragen,to register,verb,,,B1,1347
+eintreten,to enter,verb,,,B1,1348
+beeinflussen,to influence,verb,,,B1,1349
+einfügen,to insert,verb,,,B1,1350
+einführen,to introduce,verb,,,B1,1351
+einheitlich,uniform,adjective,,,B1,1352
+sich einigen,to agree,verb,,,B1,1353
+einkaufen,to shop,verb,,,B1,1354
+einladen,to invite,verb,,,B1,1355
+einnehmen,to take in,verb,,,B1,1356
+gewohnt,accustomed,adjective,,,B1,1357
+enden,to end,verb,,,B1,1358
+endgültig,final,adjective,,,B1,1359
+entdecken,to discover,verb,,,B1,1360
+entfernen,to remove,verb,,,B1,1361
+entgegenkommen,to come towards,verb,,,B1,1362
+enthalten,to contain,verb,,,B1,1363
+entlang,along,adjective,,,B1,1364
+entlassen,to dismiss,verb,,,B1,1365
+einzahlen,to pay in,verb,,,B1,1366
+einzeln,individual,adjective,,,B1,1367
+einziehen,to move in,verb,,,B1,1368
+elegant,elegant,adjective,,,B1,1369
+elektrisch,electric,adjective,,,B1,1370
+elektronisch,electronic,adjective,,,B1,1371
+empfangen,to receive,verb,,,B1,1372
+empfehlen,to recommend,verb,,,B1,1373
+Fest,party,noun,das,Feste,B1,1374
+um,around,preposition,,,B1,1375
+werden,to become,verb,,,B1,1376
+erkennen,to recognize,verb,,,B1,1377
+können,to be able to,verb,,,B1,1378
+erzählen,to tell,verb,,,B1,1379
+zufrieden,content,verb,,,B1,1380
+schlecht,bad,adjective,,,B1,1381
+sich ereignen,to occur,verb,,,B1,1382
+erfahren,to experience,verb,,,B1,1383
+erfinden,to invent,verb,,,B1,1384
+erfolgreich,successful,adjective,,,B1,1385
+erforderlich,necessary,adjective,,,B1,1386
+erfordern,to require,verb,,,B1,1387
+erfüllen,to fulfill,verb,,,B1,1388
+ergänzen,to supplement,verb,,,B1,1389
+erhalten,to receive,verb,,,B1,1390
+erhöhen,to increase,verb,,,B1,1391
+entscheiden,to decide,verb,,,B1,1392
+unentschieden,to decide,verb,,,B1,1393
+sich entschließen,to decide,verb,,,B1,1394
+entschlossen,to decide,verb,,,B1,1395
+entschuldigen,to excuse,verb,,,B1,1396
+entsorgen,to dispose of,verb,,,B1,1397
+entspannend,relaxing,adjective,,,B1,1398
+entstehen,to come into being,verb,,,B1,1399
+enttäuschen,to disappoint,verb,,,B1,1400
+entwickeln,to develop,verb,,,B1,1401
+Zentrum,center,noun,das,Zentren,B1,1402
+erledigen,to complete,verb,,,B1,1403
+erleichtern,to make easier,verb,,,B1,1404
+ernähren,to nourish,verb,,,B1,1405
+ernst,serious,adjective,,,B1,1406
+ernsthaft,seriously,adjective,,,B1,1407
+eröffnen,to open,verb,,,B1,1408
+erreichen,to reach,verb,,,B1,1409
+erschöpft,exhausted,adjective,,,B1,1410
+erschrecken,to frighten or to be frightened,verb,,,B1,1411
+ersetzen,to replace,verb,,,B1,1412
+erst,only,adjective,,,B1,1413
+sich erholen,to recover,verb,,,B1,1414
+erinnern,to remember,verb,,,B1,1415
+sich erkälten,to catch a cold,verb,,,B1,1416
+erkältet,having a cold,adjective,,,B1,1417
+erklären,to explain,verb,,,B1,1418
+sich erkundigen,to inquire,verb,,,B1,1419
+erlauben,to allow,verb,,,B1,1420
+erleben,to experience,verb,,,B1,1421
+sehr,very,adverb,,,B1,1422
+nichts,nothing,adjective,,,B1,1423
+gefallen,to please,verb,,,B1,1424
+etwas,something,adjective,,,B1,1425
+eventuell,possibly,adjective,,,B1,1426
+ewig,eternal,adjective,,,B1,1427
+extra,extra,adjective,,,B1,1428
+extrem,extreme,adjective,,,B1,1429
+fahren,to drive,verb,,,B1,1430
+erstellen,to create,verb,,,B1,1431
+erwachsen,to grow up,verb,,,B1,1432
+erwarten,to expect,verb,,,B1,1433
+erziehen,to educate,verb,,,B1,1434
+es,it,pronoun,,,B1,1435
+etwa,approximately,adjective,,,B1,1436
+links,on/to the left,adjective,,,B1,1437
+kaputt,broken,adjective,,,B1,1438
+fantastisch,fantastic,adjective,,,B1,1439
+farbig,colorful,adjective,,,B1,1440
+fassen,to grasp,verb,,,B1,1441
+fast,almost,adjective,,,B1,1442
+faul,lazy,adjective,,,B1,1443
+faulenzen,to be lazy,verb,,,B1,1444
+fehlen,to be missing,verb,,,B1,1445
+feiern,to celebrate,verb,,,B1,1446
+fair,fair,adjective,,,B1,1447
+fallen,to fall,verb,,,B1,1448
+fällig,due,adjective,,,B1,1449
+falls,in case,adjective,,,B1,1450
+falsch,wrong,adjective,,,B1,1451
+fangen,to catch,verb,,,B1,1452
+fleißig,diligent,adjective,,,B1,1453
+feucht,damp,adjective,,,B1,1454
+finanzieren,to finance,verb,,,B1,1455
+finanziell,financial,adjective,,,B1,1456
+finden,to find,verb,,,B1,1457
+flach,flat,adjective,,,B1,1458
+fernsehen,to watch television,verb,,,B1,1459
+fertig,finished,adjective,,,B1,1460
+festhalten,to hold onto,verb,,,B1,1461
+festlegen,to determine,verb,,,B1,1462
+festsetzen,to establish,verb,,,B1,1463
+feststehen,to be certain,verb,,,B1,1464
+feststellen,to determine,verb,,,B1,1465
+Fett,fat,noun,das,Fette,B1,1466
+groß,big,adjective,,,B1,1467
+fortsetzen,to continue,verb,,,B1,1468
+fotografieren,to take a photograph,verb,,,B1,1469
+fragen,to ask,verb,,,B1,1470
+frech,cheeky,adjective,,,B1,1471
+frei,free,adjective,,,B1,1472
+flexibel,flexible,adjective,,,B1,1473
+fliegen,to fly,verb,,,B1,1474
+fliehen,to flee,verb,,,B1,1475
+fließen,to flow,verb,,,B1,1476
+fließend,fluent,adjective,,,B1,1477
+folgen,to follow,verb,,,B1,1478
+folgend,following,adjective,,,B1,1479
+fordern,to demand,verb,,,B1,1480
+fördern,to promote,verb,,,B1,1481
+wählen,to choose,verb,,,B1,1482
+übernachten,to stay overnight,verb,,,B1,1483
+frühstücken,to have breakfast,verb,,,B1,1484
+fühlen,to feel,verb,,,B1,1485
+führen,to lead,verb,,,B1,1486
+funktionieren,to function,verb,,,B1,1487
+freiwillig,voluntary,adjective,,,B1,1488
+fremd,foreign,adjective,,,B1,1489
+fressen,to devour,verb,,,B1,1490
+sich freuen,to be glad,verb,,,B1,1491
+freundlich,friendly,adjective,,,B1,1492
+frieren,to freeze,verb,,,B1,1493
+frisch,fresh,adjective,,,B1,1494
+froh,happy,adjective,,,B1,1495
+fröhlich,cheerful,adjective,,,B1,1496
+früh,early,adjective,,,B1,1497
+geben,to give,verb,,,B1,1498
+gebrauchen,to use,verb,,,B1,1499
+furchtbar,terrible/awful,adjective,,,B1,1500
+Beispiel,example,noun,das,Beispiele,B2,1501
+Verständnis,understanding,noun,das,Verständnisse,B2,1502
+Vortrag,lecture,noun,der,Vorträge,B2,1503
+Unterschrift,signature,noun,die,Unterschriften,B2,1504
+Studium,course of study,noun,das,Studien,B2,1505
+Datum,date (a specific point in time),noun,das,Daten,B2,1506
+Ernährung,nutrition,noun,die,Ernährungen,B2,1507
+Hilfe,help,noun,die,Hilfen,B2,1508
+Inhalt,content,noun,der,Inhalte,B2,1509
+Alternative,alternative,noun,die,Alternativen,B2,1510
+Dauer,duration,noun,die,Dauern,B2,1511
+Diskussion,to discuss,verb,,,B2,1512
+Produktion,to produce,verb,,,B2,1513
+Stufe,step,noun,die,Stufen,B2,1514
+Ergebnis,result,noun,das,Ergebnisse,B2,1515
+Landwirtschaft,agriculture,noun,die,Landwirtschaften,B2,1516
+Leute,people,noun,,Leute,B2,1517
+Möglichkeit,possibility,noun,die,Möglichkeiten,B2,1518
+Seminar,seminar,noun,das,Seminare,B2,1519
+Standpunkt,Point of view,noun,der,Standpunkte,B2,1520
+Alltag,everyday life,noun,der,Alltage,B2,1521
+Bereich,area,noun,der,Bereiche,B2,1522
+Fortsetzung,continuation,noun,die,Fortsetzungen,B2,1523
+Freizeit,leisure time,noun,die,Freizeiten,B2,1524
+Fähigkeit,ability,noun,die,Fähigkeiten,B2,1525
+Leistung,achievement,noun,die,Leistungen,B2,1526
+Abschluss,completion,noun,der,Abschlüsse,B2,1527
+Anzahl,number,noun,die,Anzahlen,B2,1528
+Arbeiter,worker,noun,der,Arbeiter,B2,1529
+Aussprache,pronunciation,noun,die,Aussprachen,B2,1530
+Erfolg,success,noun,der,Erfolge,B2,1531
+Gefahr,danger,noun,die,Gefahren,B2,1532
+Gemüse,vegetables,noun,das,Gemüse,B2,1533
+Geschichte,history,noun,die,Geschichten,B2,1534
+Grund,reason,noun,der,Gründe,B2,1535
+Kraft,strength,noun,die,Kräfte,B2,1536
+Literatur,literature,noun,die,Literaturen,B2,1537
+Politiker,politician,noun,der,Politiker,B2,1538
+Professor,professor,noun,der,Professoren,B2,1539
+Radfahrer,Cyclist,noun,der,Radfahrer,B2,1540
+Rolle,role,noun,die,Rollen,B2,1541
+Salat,salad,noun,der,Salate,B2,1542
+Semester,semester,noun,das,Semester,B2,1543
+Supermarkt,supermarket,noun,der,Supermärkte,B2,1544
+Universität,University,noun,die,Universitäten,B2,1545
+Unterricht,lesson or instruction,noun,der,Unterrichte,B2,1546
+Versuch,attempt,noun,der,Versuche,B2,1547
+Werbung,Advertising,noun,die,Werbungen,B2,1548
+Wissenschaft,Science,noun,die,Wissenschaften,B2,1549
+Zukunft,future,noun,die,Zukünfte,B2,1550
+Altersheim,old people's home,noun,das,Altersheime,B2,1551
+Angst,fear,noun,die,Ängste,B2,1552
+Anmeldung,registration,noun,die,Anmeldungen,B2,1553
+Antrag,application,noun,der,Anträge,B2,1554
+Bauernhof,farm,noun,der,Bauernhöfe,B2,1555
+Beruf,profession,noun,der,Berufe,B2,1556
+Bevölkerung,population,noun,die,Bevölkerungen,B2,1557
+Bewegung,movement,noun,die,Bewegungen,B2,1558
+Bewohner,inhabitant,noun,der,Bewohner,B2,1559
+Bildschirm,screen,noun,der,Bildschirme,B2,1560
+Breite,width,noun,die,Breiten,B2,1561
+Daten,to date,verb,,,B2,1562
+Druck,pressure,noun,der,Drücke,B2,1563
+Eisenbahn,to drive,verb,,,B2,1564
+Eltern,parents,noun,,,B2,1565
+Entscheidung,decision,noun,die,Entscheidungen,B2,1566
+Fahrrad,bicycle,noun,das,Fahrräder,B2,1567
+Fenster,window,noun,das,Fenster,B2,1568
+Flüssigkeit,liquid,noun,die,Flüssigkeiten,B2,1569
+Forum,forum,noun,das,Foren,B2,1570
+Freiheit,freedom,noun,die,Freiheiten,B2,1571
+Fremdsprache,foreign language,noun,die,Fremdsprachen,B2,1572
+Garantie,guarantee,noun,die,Garantien,B2,1573
+Garderobe,wardrobe,noun,die,Garderoben,B2,1574
+Gemeinschaft,community,noun,die,Gemeinschaften,B2,1575
+Gesellschaft,society,noun,die,Gesellschaften,B2,1576
+Handy,mobile phone,noun,das,Handys,B2,1577
+Heimat,Homeland or native place,noun,die,Heimaten,B2,1578
+Hörer,listener,noun,der,Hörer,B2,1579
+Institut,Institute,noun,das,Institute,B2,1580
+Koffer,suitcase,noun,der,Koffer,B2,1581
+Kranke,patient,noun,,Kranke,B2,1582
+Krankheit,illness,noun,die,Krankheiten,B2,1583
+Kreditkarte,credit card,noun,die,Kreditkarten,B2,1584
+Kühlschrank,refrigerator,noun,der,Kühlschränke,B2,1585
+Liebe,love,noun,die,Lieben,B2,1586
+Linie,line,noun,die,Linien,B2,1587
+Medikament,medication,noun,das,Medikamente,B2,1588
+Nachfrage,demand,noun,die,Nachfragen,B2,1589
+Natur,nature,noun,die,Natur,B2,1590
+Polizei,police,noun,die,Polizeien,B2,1591
+Qualifikation,to qualify,verb,,,B2,1592
+Referat,A report or presentation,noun,das,Referate,B2,1593
+Regen,to stir,verb,,,B2,1594
+Reihenfolge,order or sequence of items,noun,die,Reihenfolgen,B2,1595
+Rücksicht,Consideration,noun,die,Rücksichten,B2,1596
+Schwierigkeit,difficulty,noun,die,Schwierigkeiten,B2,1597
+Senioren,seniors,verb,,,B2,1598
+Sicherheit,safety,noun,die,Sicherheiten,B2,1599
+Sprechstunde,office hour,noun,die,Sprechstunden,B2,1600
+Strom,electric current,noun,der,Ströme,B2,1601
+Studie,study,noun,die,Studien,B2,1602
+Studio,studio (a place for artistic or professional work,noun,das,Studios,B2,1603
+Störung,Disturbance,noun,die,Störungen,B2,1604
+Sucht,addiction,noun,die,Süchte,B2,1605
+Szene,scene (a setting or sequence in a play,noun,die,Szenen,B2,1606
+Temperatur,temperature (a measure of the degree of heat or cold),noun,die,Temperaturen,B2,1607
+Tätigkeit,activity,noun,die,Tätigkeiten,B2,1608
+Unterschied,difference,noun,der,Unterschiede,B2,1609
+Ursache,cause,noun,die,Ursachen,B2,1610
+Verantwortung,responsibility,noun,die,Verantwortungen,B2,1611
+Vergleich,comparison,noun,der,Vergleiche,B2,1612
+Verlust,loss,noun,der,Verluste,B2,1613
+Vorbereitung,preparation,noun,die,Vorbereitungen,B2,1614
+Vorteil,advantage,noun,der,Vorteile,B2,1615
+Wissenschaftler,scientist,noun,der,Wissenschaftler,B2,1616
+Überschrift,heading or title,noun,die,Überschriften,B2,1617
+goethe-zertifikat,goethe-zertifikat,adjective,,,B2,1618
+modellsatz,modellsatz,adjective,,,B2,1619
+minuten,minuten,verb,,,B2,1620
+kandidatenblätter,kandidatenblätter,adjective,,,B2,1621
+angemessen,angemessen,verb,,,B2,1622
+aufgaben,aufgaben,verb,,,B2,1623
+richtige,richtige,adjective,,,B2,1624
+punkte,punkte,adjective,,,B2,1625
+gerster,gerster,adjective,,,B2,1626
+version,version,adjective,,,B2,1627
+circa,circa,adjective,,,B2,1628
+dinge,dinge,adjective,,,B2,1629
+fleisch,fleisch,adjective,,,B2,1630
+bewertende,bewertende,adjective,,,B2,1631
+menschen,menschen,verb,,,B2,1632
+neuhaus,neuhaus,adjective,,,B2,1633
+ptn-nr,ptn-nr,adjective,,,B2,1634
+teilnehmende,teilnehmende,adjective,,,B2,1635
+griffe,griffe,adjective,,,B2,1636
+informationen,informationen,verb,,,B2,1637
+internet,internet,adjective,,,B2,1638
+lösungen,lösungen,verb,,,B2,1639
+erfüllung,erfüllung,adjective,,,B2,1640
+modular,modular,adjective,,,B2,1641
+teilweise,teilweise,adjective,,,B2,1642
+trächtigen,trächtigen,verb,,,B2,1643
+überwiegend,überwiegend,adjective,,,B2,1644
+kohärenz,kohärenz,adjective,,,B2,1645
+prüferblätter,prüferblätter,adjective,,,B2,1646
+teile,teile,adjective,,,B2,1647
+allem,allem,adjective,,,B2,1648
+nachname,nachname,adjective,,,B2,1649
+personen,personen,verb,,,B2,1650
+sekunden,sekunden,verb,,,B2,1651
+texte,texte,adjective,,,B2,1652
+arbeitszeit,arbeitszeit,adjective,,,B2,1653
+bewertet,bewertet,adjective,,,B2,1654
+institution,institution,adjective,,,B2,1655
+lücke,lücke,adjective,,,B2,1656
+nachteile,nachteile,adjective,,,B2,1657
+plastikverpackungen,plastikverpackungen,verb,,,B2,1658
+vorgeschlagene,vorgeschlagene,adjective,,,B2,1659
+argumente,argumente,adjective,,,B2,1660
+bewertung,bewertung,adjective,,,B2,1661
+bewertungskriterien,bewertungskriterien,verb,,,B2,1662
+cfrau,cfrau,adjective,,,B2,1663
+experten,experten,verb,,,B2,1664
+füllen,füllen,verb,,,B2,1665
+geburtsdatum,geburtsdatum,adjective,,,B2,1666
+goethe-institut,goethe-institut,adjective,,,B2,1667
+korrektur,korrektur,adjective,,,B2,1668
+kurzen,kurzen,verb,,,B2,1669
+ländern,ländern,adjective,,,B2,1670
+münchen,münchen,verb,,,B2,1671
+patienten,patienten,verb,,,B2,1672
+strukturen,strukturen,verb,,,B2,1673
+vielen,vielen,verb,,,B2,1674
+welche,welche,adjective,,,B2,1675
+bewertungsbogen,bewertungsbogen,verb,,,B2,1676
+darüber,darüber,adjective,,,B2,1677
+deutschland,deutschland,adjective,,,B2,1678
+eigene,eigene,adjective,,,B2,1679
+endgeräte,endgeräte,adjective,,,B2,1680
+erlaubt,erlaubt,adjective,,,B2,1681
+fehlgriffe,fehlgriffe,adjective,,,B2,1682
+gerne,gerne,adjective,,,B2,1683
+gesprächspartner,gesprächspartner,adjective,,,B2,1684
+gliedrig,gliedrig,adjective,,,B2,1685
+handys,handys,adjective,,,B2,1686
+ihren,ihren,verb,,,B2,1687
+ihrer,ihrer,adjective,,,B2,1688
+insekten,insekten,verb,,,B2,1689
+interaktion,interaktion,adjective,,,B2,1690
+mobile,mobile,adjective,,,B2,1691
+stellenweise,stellenweise,adjective,,,B2,1692
+wohngemeinschaften,wohngemeinschaften,verb,,,B2,1693
+wörterbücher,wörterbücher,adjective,,,B2,1694
+zuordnung,zuordnung,adjective,,,B2,1695
+alternativen,alternativen,verb,,,B2,1696
+beeinträchtigen,beeinträchtigen,verb,,,B2,1697
+beherrschung,beherrschung,adjective,,,B2,1698
+berlin,berlin,adjective,,,B2,1699
+bewerten,bewerten,verb,,,B2,1700
+bleibt,bleibt,adjective,,,B2,1701
+deutschen,deutschen,verb,,,B2,1702
+differenziert,differenziert,adjective,,,B2,1703
+eines,eines,adjective,,,B2,1704
+falschrichtig,falschrichtig,adjective,,,B2,1705
+freunde,freunde,adjective,,,B2,1706
+genauer,genauer,adjective,,,B2,1707
+gesamtergebnis,gesamtergebnis,adjective,,,B2,1708
+gesprächspartnerin,gesprächspartnerin,adjective,,,B2,1709
+heutzutage,heutzutage,adjective,,,B2,1710
+ideen,ideen,verb,,,B2,1711
+kinigard,kinigard,adjective,,,B2,1712
+konzentriert,konzentriert,adjective,,,B2,1713
+liebsten,liebsten,verb,,,B2,1714
+luxus,luxus,adjective,,,B2,1715
+notizen,notizen,verb,,,B2,1716
+partneradäquat,partneradäquat,adjective,,,B2,1717
+plastiktüte,plastiktüte,adjective,,,B2,1718
+psvorname,psvorname,adjective,,,B2,1719
+sollten,sollten,verb,,,B2,1720
+spektrum,spektrum,adjective,,,B2,1721
+sprechweise,sprechweise,adjective,,,B2,1722
+standpunkte,standpunkte,adjective,,,B2,1723
+stunden,stunden,verb,,,B2,1724
+sätze,sätze,adjective,,,B2,1725
+touristen,touristen,verb,,,B2,1726
+transkripte,transkripte,adjective,,,B2,1727
+umrechnung,umrechnung,adjective,,,B2,1728
+unserer,unserer,adjective,,,B2,1729
+vereinzelte,vereinzelte,adjective,,,B2,1730
+vorbereitungszeit,vorbereitungszeit,adjective,,,B2,1731
+wörter,wörter,adjective,,,B2,1732
+überblick,überblick,adjective,,,B2,1733
+ablenkungen,ablenkungen,verb,,,B2,1734
+abweichungen,abweichungen,verb,,,B2,1735
+adäquat,adäquat,adjective,,,B2,1736
+anonym,anonym,adjective,,,B2,1737
+becker,becker,adjective,,,B2,1738
+beträgt,beträgt,adjective,,,B2,1739
+beurteilen,beurteilen,verb,,,B2,1740
+blauen,blauen,verb,,,B2,1741
+brauche,brauche,adjective,,,B2,1742
+claudia,claudia,adjective,,,B2,1743
+computer,computer,adjective,,,B2,1744
+darum,darum,adjective,,,B2,1745
+darunter,darunter,adjective,,,B2,1746
+digitale,digitale,adjective,,,B2,1747
+e-mails,e-mails,adjective,,,B2,1748
+entsprechend,entsprechend,adjective,,,B2,1749
+erheblich,erheblich,adjective,,,B2,1750
+europäischer,europäischer,adjective,,,B2,1751
+foren,foren,verb,,,B2,1752
+freunden,freunden,verb,,,B2,1753
+funktionen,funktionen,verb,,,B2,1754
+gemeinsamer,gemeinsamer,adjective,,,B2,1755
+gespräche,gespräche,adjective,,,B2,1756
+hause,hause,adjective,,,B2,1757
+ihrem,ihrem,adjective,,,B2,1758
+inhaltspunkte,inhaltspunkte,adjective,,,B2,1759
+jahren,jahren,verb,,,B2,1760
+jedem,jedem,adjective,,,B2,1761
+kenntnissen,kenntnissen,verb,,,B2,1762
+kollegen,kollegen,verb,,,B2,1763
+kommt,kommt,adjective,,,B2,1764
+konnten,konnten,verb,,,B2,1765
+krankheiten,krankheiten,verb,,,B2,1766
+kriterien,kriterien,verb,,,B2,1767
+leistungsbeispiele,leistungsbeispiele,adjective,,,B2,1768
+milch,milch,adjective,,,B2,1769
+nehme,nehme,adjective,,,B2,1770
+nimmt,nimmt,adjective,,,B2,1771
+nächster,nächster,adjective,,,B2,1772
+punkten,punkten,verb,,,B2,1773
+referenzrahmen,referenzrahmen,verb,,,B2,1774
+ruhepausen,ruhepausen,verb,,,B2,1775
+schwarzen,schwarzen,verb,,,B2,1776
+sowohl,sowohl,adjective,,,B2,1777
+spart,spart,adjective,,,B2,1778
+sprachlich,sprachlich,adjective,,,B2,1779
+strukturenschatz,strukturenschatz,adjective,,,B2,1780
+teilzeitstudiums,teilzeitstudiums,adjective,,,B2,1781
+touristinnen,touristinnen,verb,,,B2,1782
+verschiedene,verschiedene,adjective,,,B2,1783
+vorteile,vorteile,adjective,,,B2,1784
+wasser,wasser,adjective,,,B2,1785
+wohnformen,wohnformen,verb,,,B2,1786
+äußern,äußern,adjective,,,B2,1787
+äußerung,äußerung,adjective,,,B2,1788
+abschnitte,abschnitte,adjective,,,B2,1789
+abstrakten,abstrakten,verb,,,B2,1790
+allen,allen,verb,,,B2,1791
+allgemeine,allgemeine,adjective,,,B2,1792
+anbau,anbau,adjective,,,B2,1793
+angebote,angebote,adjective,,,B2,1794
+ansatzweise,ansatzweise,adjective,,,B2,1795
+anschließend,anschließend,adjective,,,B2,1796
+anteil,anteil,adjective,,,B2,1797
+arbeitsmodell,arbeitsmodell,adjective,,,B2,1798
+arbeitssituation,arbeitssituation,adjective,,,B2,1799
+arbeitstechniken,arbeitstechniken,verb,,,B2,1800
+arztgespräch,arztgespräch,adjective,,,B2,1801
+aufgabenerfüllung,aufgabenerfüllung,adjective,,,B2,1802
+aufschreibt,aufschreibt,adjective,,,B2,1803
+ausdrücken,ausdrücken,verb,,,B2,1804
+aussagen,aussagen,verb,,,B2,1805
+austausch,austausch,adjective,,,B2,1806
+autos,autos,adjective,,,B2,1807
+bargeld,bargeld,adjective,,,B2,1808
+bearbeitet,bearbeitet,adjective,,,B2,1809
+beeinträchtigt,beeinträchtigt,adjective,,,B2,1810
+begrüße,begrüße,adjective,,,B2,1811
+benutze,benutze,adjective,,,B2,1812
+beschwerden,beschwerden,verb,,,B2,1813
+besitz,besitz,adjective,,,B2,1814
+bessere,bessere,adjective,,,B2,1815
+betriebe,betriebe,adjective,,,B2,1816
+betrieben,betrieben,verb,,,B2,1817
+beurteilung,beurteilung,adjective,,,B2,1818
+bewbo-sa,bewbo-sa,adjective,,,B2,1819
+bilder,bilder,adjective,,,B2,1820
+colourbox,colourbox,adjective,,,B2,1821
+daf-prüfungen,daf-prüfungen,verb,,,B2,1822
+damen,damen,verb,,,B2,1823
+darauf,darauf,adjective,,,B2,1824
+dargestellt,dargestellt,adjective,,,B2,1825
+dauert,dauert,adjective,,,B2,1826
+debatte,debatte,adjective,,,B2,1827
+debattierclubs,debattierclubs,adjective,,,B2,1828
+derzeit,derzeit,adjective,,,B2,1829
+deutsche,deutsche,adjective,,,B2,1830
+digitaler,digitaler,adjective,,,B2,1831
+durchgehend,durchgehend,adjective,,,B2,1832
+ebert,ebert,adjective,,,B2,1833
+einblick,einblick,adjective,,,B2,1834
+einfache,einfache,adjective,,,B2,1835
+einflüsse,einflüsse,adjective,,,B2,1836
+eingesetzt,eingesetzt,adjective,,,B2,1837
+einige,einige,adjective,,,B2,1838
+einkaufstüte,einkaufstüte,adjective,,,B2,1839
+einträchtigen,einträchtigen,verb,,,B2,1840
+einzelne,einzelne,adjective,,,B2,1841
+einzelprüfung,einzelprüfung,adjective,,,B2,1842
+einzige,einzige,adjective,,,B2,1843
+englisch,englisch,adjective,,,B2,1844
+erbsen,erbsen,verb,,,B2,1845
+erfahrungen,erfahrungen,verb,,,B2,1846
+erkennbar,erkennbar,adjective,,,B2,1847
+erster,erster,adjective,,,B2,1848
+europäer,europäer,adjective,,,B2,1849
+europäerinnen,europäerinnen,verb,,,B2,1850
+fairness,fairness,adjective,,,B2,1851
+findet,findet,adjective,,,B2,1852
+fleischkonsum,fleischkonsum,adjective,,,B2,1853
+fleischproduktion,fleischproduktion,adjective,,,B2,1854
+folgender,folgender,adjective,,,B2,1855
+forumsbeitrag,forumsbeitrag,adjective,,,B2,1856
+fotos,fotos,adjective,,,B2,1857
+freier,freier,adjective,,,B2,1858
+geachtet,geachtet,adjective,,,B2,1859
+gedanken,gedanken,verb,,,B2,1860
+gedächtnis,gedächtnis,adjective,,,B2,1861
+gemeinschaften,gemeinschaften,verb,,,B2,1862
+gesprächspartnerinnen,gesprächspartnerinnen,verb,,,B2,1863
+gesprächspartners,gesprächspartners,adjective,,,B2,1864
+gesundheit,gesundheit,adjective,,,B2,1865
+großen,großen,verb,,,B2,1866
+großer,großer,adjective,,,B2,1867
+großstädten,großstädten,verb,,,B2,1868
+gründe,gründe,adjective,,,B2,1869
+halte,halte,adjective,,,B2,1870
+hauptteil,hauptteil,adjective,,,B2,1871
+heißt,heißt,adjective,,,B2,1872
+herren,herren,verb,,,B2,1873
+herrn,herrn,adjective,,,B2,1874
+herzlichen,herzlichen,verb,,,B2,1875
+hilfreich,hilfreich,adjective,,,B2,1876
+hilft,hilft,adjective,,,B2,1877
+ihres,ihres,adjective,,,B2,1878
+individualisierte,individualisierte,adjective,,,B2,1879
+inhaltlich,inhaltlich,adjective,,,B2,1880
+inhaltsverzeichnis,inhaltsverzeichnis,adjective,,,B2,1881
+insbesondere,insbesondere,adjective,,,B2,1882
+insektenriegel,insektenriegel,adjective,,,B2,1883
+jahrhunderts,jahrhunderts,adjective,,,B2,1884
+kalorien,kalorien,verb,,,B2,1885
+katharina,katharina,adjective,,,B2,1886
+keiner,keiner,adjective,,,B2,1887
+kennt,kennt,adjective,,,B2,1888
+kinder,kinder,adjective,,,B2,1889
+kleine,kleine,adjective,,,B2,1890
+kollegin,kollegin,adjective,,,B2,1891
+kriterium,kriterium,adjective,,,B2,1892
+kutsche,kutsche,adjective,,,B2,1893
+käfer,käfer,adjective,,,B2,1894
+lebensmittelproduktion,lebensmittelproduktion,adjective,,,B2,1895
+leeren,leeren,verb,,,B2,1896
+leistungen,leistungen,verb,,,B2,1897
+liegt,liegt,adjective,,,B2,1898
+loredana,loredana,adjective,,,B2,1899
+lässt,lässt,adjective,,,B2,1900
+löbo-mse-hv,löbo-mse-hv,adjective,,,B2,1901
+manchen,manchen,verb,,,B2,1902
+mediziner,mediziner,adjective,,,B2,1903
+mehreren,mehreren,verb,,,B2,1904
+meisten,meisten,verb,,,B2,1905
+mitbewohner,mitbewohner,adjective,,,B2,1906
+mithilfe,mithilfe,adjective,,,B2,1907
+motivation,motivation,adjective,,,B2,1908
+msvorname,msvorname,adjective,,,B2,1909
+mühsam,mühsam,adjective,,,B2,1910
+nachweis,nachweis,adjective,,,B2,1911
+niveau,niveau,adjective,,,B2,1912
+nomade,nomade,adjective,,,B2,1913
+nomaden,nomaden,verb,,,B2,1914
+nomadentum,nomadentum,adjective,,,B2,1915
+nummernschild,nummernschild,adjective,,,B2,1916
+nutzpflanzen,nutzpflanzen,verb,,,B2,1917
+orten,orten,verb,,,B2,1918
+oskar-von-miller-ring,oskar-von-miller-ring,adjective,,,B2,1919
+paarprüfung,paarprüfung,adjective,,,B2,1920
+persönliche,persönliche,adjective,,,B2,1921
+persönlichen,persönlichen,verb,,,B2,1922
+persönlichkeit,persönlichkeit,adjective,,,B2,1923
+phologie,phologie,adjective,,,B2,1924
+prechen,prechen,verb,,,B2,1925
+produkte,produkte,adjective,,,B2,1926
+professoren,professoren,verb,,,B2,1927
+professorinnen,professorinnen,verb,,,B2,1928
+prozent,prozent,adjective,,,B2,1929
+punktzahl,punktzahl,adjective,,,B2,1930
+ratsuchende,ratsuchende,adjective,,,B2,1931
+realisierung,realisierung,adjective,,,B2,1932
+redner,redner,adjective,,,B2,1933
+regelstudienzeit,regelstudienzeit,adjective,,,B2,1934
+register,register,adjective,,,B2,1935
+reguliert,reguliert,adjective,,,B2,1936
+repertoire,repertoire,adjective,,,B2,1937
+restaurants,restaurants,adjective,,,B2,1938
+richtet,richtet,adjective,,,B2,1939
+rocca,rocca,adjective,,,B2,1940
+sachen,sachen,verb,,,B2,1941
+satzteilen,satzteilen,verb,,,B2,1942
+schatz,schatz,adjective,,,B2,1943
+schlechter,schlechter,adjective,,,B2,1944
+seine,seine,adjective,,,B2,1945
+seltener,seltener,adjective,,,B2,1946
+seniorin,seniorin,adjective,,,B2,1947
+sieht,sieht,adjective,,,B2,1948
+sojabohnen,sojabohnen,verb,,,B2,1949
+solche,solche,adjective,,,B2,1950
+sommer,sommer,adjective,,,B2,1951
+sprachfunktionen,sprachfunktionen,verb,,,B2,1952
+standardsprache,standardsprache,adjective,,,B2,1953
+stattdessen,stattdessen,verb,,,B2,1954
+steht,steht,adjective,,,B2,1955
+steigt,steigt,adjective,,,B2,1956
+stichpunkte,stichpunkte,adjective,,,B2,1957
+stockende,stockende,adjective,,,B2,1958
+strukturieren,strukturieren,verb,,,B2,1959
+studienbeginn,studienbeginn,adjective,,,B2,1960
+studienordnung,studienordnung,adjective,,,B2,1961
+studierende,studierende,adjective,,,B2,1962
+studiums,studiums,adjective,,,B2,1963
+städte,städte,adjective,,,B2,1964
+syntax,syntax,adjective,,,B2,1965
+sätzen,sätzen,verb,,,B2,1966
+texten,texten,verb,,,B2,1967
+theaterwissenschaft,theaterwissenschaft,adjective,,,B2,1968
+themen,themen,verb,,,B2,1969
+tourismus,tourismus,adjective,,,B2,1970
+transkriptionen,transkriptionen,verb,,,B2,1971
+umfang,umfang,adjective,,,B2,1972
+umweltfreundlicher,umweltfreundlicher,adjective,,,B2,1973
+umzuschalten,umzuschalten,verb,,,B2,1974
+unwichtig,unwichtig,adjective,,,B2,1975
+verbreitet,verbreitet,adjective,,,B2,1976
+verfassen,verfassen,verb,,,B2,1977
+vergesse,vergesse,adjective,,,B2,1978
+verknüpft,verknüpft,adjective,,,B2,1979
+verknüpfung,verknüpfung,adjective,,,B2,1980
+verpackungen,verpackungen,verb,,,B2,1981
+verringert,verringert,adjective,,,B2,1982
+verwendet,verwendet,adjective,,,B2,1983
+vorgesetzten,vorgesetzten,verb,,,B2,1984
+vorwort,vorwort,adjective,,,B2,1985
+wachsende,wachsende,adjective,,,B2,1986
+waren,waren,verb,,,B2,1987
+weise,weise,adjective,,,B2,1988
+weltbevölkerung,weltbevölkerung,adjective,,,B2,1989
+wenige,wenige,adjective,,,B2,1990
+weniger,weniger,adjective,,,B2,1991
+wochen,wochen,verb,,,B2,1992
+wohne,wohne,adjective,,,B2,1993
+wohngemeinschaft,wohngemeinschaft,adjective,,,B2,1994
+wohnungsnot,wohnungsnot,adjective,,,B2,1995
+womit,womit,adjective,,,B2,1996
+wurden,wurden,verb,,,B2,1997
+zeitdruck,zeitdruck,adjective,,,B2,1998
+änderte,änderte,adjective,,,B2,1999
+ärzte,ärzte,adjective,,,B2,2000
