@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useLessonStore } from '../stores/lessonStore';
+import { useAppStore } from '../stores/appStore';
 import type { Level, SubmitAnswerResponse } from '../types';
 import MCQ from '../exercises/MCQ';
 import FillBlank from '../exercises/FillBlank';
@@ -8,6 +9,7 @@ import Translation from '../exercises/Translation';
 import SentenceBuilding from '../exercises/SentenceBuilding';
 import Listening from '../exercises/Listening';
 import Speaking from '../exercises/Speaking';
+import { useAnswerAudio } from '../hooks/useAnswerAudio';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorMessage from '../components/ErrorMessage';
 
@@ -32,6 +34,8 @@ export default function Lesson() {
   const { level } = useParams<{ level: string }>();
   const navigate = useNavigate();
   const { exercises, currentIndex, isLoading, isComplete, error, loadExercises, submitCurrentAnswer, nextExercise, finishLesson } = useLessonStore();
+  const soundEnabled = useAppStore((s) => s.soundEnabled);
+  const { primeAudio, playCorrectCue, playWrongCue } = useAnswerAudio(soundEnabled);
   const [submittedResult, setSubmittedResult] = useState<SubmitAnswerResponse | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -53,7 +57,13 @@ export default function Lesson() {
 
   const handleSubmit = async (answer: string) => {
     setIsSubmitting(true);
-    try { setSubmittedResult(await submitCurrentAnswer(answer)); }
+    try {
+      primeAudio();
+      const result = await submitCurrentAnswer(answer);
+      setSubmittedResult(result);
+      if (result.is_correct) playCorrectCue();
+      else playWrongCue();
+    }
     finally { setIsSubmitting(false); }
   };
   const handleNext = () => { setSubmittedResult(null); nextExercise(); };

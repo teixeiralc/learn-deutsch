@@ -10,14 +10,18 @@ interface AppStore {
   lessonHistory: LessonResult[];
   isLoadingStats: boolean;
   theme: Theme;
+  soundEnabled: boolean;
 
   setSelectedLevel: (level: Level) => void;
   fetchStats: () => Promise<void>;
   refreshAll: () => Promise<void>;
   toggleTheme: () => void;
+  toggleSound: () => void;
 }
 
 const savedTheme = (localStorage.getItem('theme') as Theme | null) ?? 'dark';
+const savedSound = localStorage.getItem('soundEnabled');
+const initialSoundEnabled = savedSound === null ? true : savedSound !== 'false';
 
 export const useAppStore = create<AppStore>((set, get) => ({
   selectedLevel: 'A1',
@@ -25,6 +29,7 @@ export const useAppStore = create<AppStore>((set, get) => ({
   lessonHistory: [],
   isLoadingStats: false,
   theme: savedTheme,
+  soundEnabled: initialSoundEnabled,
 
   setSelectedLevel: (level) => set({ selectedLevel: level }),
 
@@ -33,6 +38,12 @@ export const useAppStore = create<AppStore>((set, get) => ({
     localStorage.setItem('theme', next);
     document.documentElement.classList.toggle('light', next === 'light');
     set({ theme: next });
+  },
+
+  toggleSound: () => {
+    const next = !get().soundEnabled;
+    localStorage.setItem('soundEnabled', String(next));
+    set({ soundEnabled: next });
   },
 
   fetchStats: async () => {
