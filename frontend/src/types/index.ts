@@ -8,6 +8,8 @@ export type ExerciseType =
   | 'listening'
   | 'speaking';
 
+export type ExerciseCategory = 'all' | 'grammar' | 'listening' | 'speaking';
+
 export interface Vocabulary {
   id: number;
   german: string;
@@ -56,6 +58,7 @@ export interface GeneratedExercise {
   sentence_id?: number;
   vocabulary_id?: number;
   explanation: string;
+  hint?: string;
   metadata?: Record<string, unknown>;
 }
 

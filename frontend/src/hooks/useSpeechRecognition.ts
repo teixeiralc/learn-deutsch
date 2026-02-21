@@ -4,9 +4,10 @@ interface SpeechRecognitionHook {
   transcript: string;
   isListening: boolean;
   error: string | null;
-  start: () => void;
-  stop: () => void;
+  startListening: () => void;
+  stopListening: () => void;
   reset: () => void;
+  isSupported: boolean;
 }
 
 // Extended types for Web Speech API (not fully typed in lib.dom.d.ts)
@@ -20,7 +21,9 @@ export function useSpeechRecognition(lang = 'de-DE'): SpeechRecognitionHook {
   const [error, setError] = useState<string | null>(null);
   const recognitionRef = useRef<{ start(): void; stop(): void; abort(): void } | null>(null);
 
-  const start = useCallback(() => {
+  const isSupported = !!((window as any).SpeechRecognition || (window as any).webkitSpeechRecognition);
+
+  const startListening = useCallback(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SpeechRecognition) {
@@ -48,7 +51,7 @@ export function useSpeechRecognition(lang = 'de-DE'): SpeechRecognitionHook {
     recognition.start();
   }, [lang]);
 
-  const stop = useCallback(() => {
+  const stopListening = useCallback(() => {
     recognitionRef.current?.stop();
     setIsListening(false);
   }, []);
@@ -60,5 +63,5 @@ export function useSpeechRecognition(lang = 'de-DE'): SpeechRecognitionHook {
     setError(null);
   }, []);
 
-  return { transcript, isListening, error, start, stop, reset };
+  return { transcript, isListening, error, startListening, stopListening, reset, isSupported };
 }

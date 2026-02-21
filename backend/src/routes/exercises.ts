@@ -14,11 +14,11 @@ const router = Router();
 
 // POST /api/exercises/generate
 router.post('/generate', (req, res) => {
-  const { level, count = 5 } = req.body as GenerateExercisesRequest & { count?: number };
+  const { level, count = 5, category = 'all' } = req.body as GenerateExercisesRequest & { count?: number };
   if (!level) return res.status(400).json({ error: 'level is required' });
 
   try {
-    const exercises = generateExercises(level as Level, count);
+    const exercises = generateExercises(level as Level, count, category);
     res.json(exercises);
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : 'Failed to generate exercises';

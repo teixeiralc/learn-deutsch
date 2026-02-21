@@ -1,5 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import { useTTS } from '../hooks/useTTS';
+import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -25,19 +27,16 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
   const [playing, setPlaying] = useState(false);
   const [playCount, setPlayCount] = useState(0);
   const [focused, setFocused] = useState(false);
-  const uttRef = useRef<SpeechSynthesisUtterance | null>(null);
+  const { speak } = useTTS();
 
-  const speak = () => {
-    if (!('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(exercise.correct_answer);
-    utt.lang = 'de-DE';
-    utt.rate = 0.85;
-    utt.onstart = () => setPlaying(true);
-    utt.onend = () => setPlaying(false);
-    uttRef.current = utt;
-    window.speechSynthesis.speak(utt);
-    setPlayCount(c => c + 1);
+  const textToSpeak = (exercise.metadata?.text_to_speak as string) ?? exercise.correct_answer;
+
+  const handlePlay = () => {
+    speak(
+      textToSpeak,
+      () => setPlaying(true),
+      () => { setPlaying(false); setPlayCount(c => c + 1); },
+    );
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -55,14 +54,21 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
       <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
         {exercise.question}
       </h2>
-      <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24 }}>Listen and type what you hear</p>
+      <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>Listen carefully and type what you hear</p>
+
+      <HintRevealComponent
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => { if (!result && !isSubmitting) onSubmit('[revealed]'); }}
+      />
 
       {/* Play button */}
       <button
-        onClick={speak}
+        onClick={handlePlay}
         style={{
-          display: 'flex', alignItems: 'center', gap: 12,
-          padding: '18px 24px', borderRadius: 14, border: 'none', cursor: 'pointer', fontFamily: 'inherit',
+          display: 'flex', alignItems: 'center', gap: 12, marginTop: 16,
+          padding: '18px 24px', borderRadius: 14, cursor: 'pointer', fontFamily: 'inherit',
           width: '100%', marginBottom: 20,
           background: playing ? 'rgba(245,158,11,0.1)' : 'var(--bg-card)',
           border: `1px solid ${playing ? 'rgba(245,158,11,0.3)' : 'var(--border-muted)'}`,

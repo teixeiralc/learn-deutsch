@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -37,10 +38,18 @@ export default function MCQ({ exercise, onSubmit, result, isSubmitting }: Props)
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 28 }}>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 12 }}>
         {exercise.question}
       </h2>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 9 }}>
+
+      <HintRevealComponent
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => !result && !isSubmitting && handleSelect('[revealed]')}
+      />
+
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 9, marginTop: 16 }}>
         {(exercise.options ?? []).map(option => (
           <button
             key={option}

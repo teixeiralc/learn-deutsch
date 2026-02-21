@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -28,11 +29,19 @@ export default function FillBlank({ exercise, onSubmit, result, isSubmitting }: 
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: hint ? 8 : 28 }}>
+      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: hint ? 8 : 12 }}>
         {question}
       </h2>
-      {hint && <p style={{ color: 'var(--text-muted)', fontSize: 13, marginBottom: 24, fontStyle: 'italic' }}>{hint}</p>}
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {hint && <p style={{ color: 'var(--text-muted)', fontSize: 13, marginBottom: 12, fontStyle: 'italic' }}>{hint}</p>}
+
+      <HintRevealComponent
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => { if (!result && !isSubmitting) onSubmit('[revealed]'); }}
+      />
+
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 16 }}>
         <input
           type="text" value={answer} onChange={e => setAnswer(e.target.value)}
           disabled={!!result || isSubmitting}

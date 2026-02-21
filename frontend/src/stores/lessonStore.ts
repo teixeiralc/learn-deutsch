@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import type { GeneratedExercise, Level, SubmitAnswerResponse } from '../types';
+import type { ExerciseCategory, GeneratedExercise, Level, SubmitAnswerResponse } from '../types';
 import { generateExercises, submitAnswer, completeLesson } from '../services/api';
 
 interface AnswerRecord {
@@ -16,7 +16,9 @@ interface LessonStore {
   isComplete: boolean;
   error: string | null;
   lastXpEarned: number;
+  category: ExerciseCategory;
 
+  setCategory: (category: ExerciseCategory) => void;
   loadExercises: (level: Level) => Promise<void>;
   submitCurrentAnswer: (userAnswer: string) => Promise<SubmitAnswerResponse>;
   nextExercise: () => void;
@@ -32,13 +34,17 @@ export const useLessonStore = create<LessonStore>((set, get) => ({
   isComplete: false,
   error: null,
   lastXpEarned: 0,
+  category: 'all',
+
+  setCategory: (category) => set({ category }),
 
   loadExercises: async (level) => {
+    const { category } = get();
     set({ isLoading: true, error: null, exercises: [], currentIndex: 0, answers: [], isComplete: false });
     try {
-      const exercises = await generateExercises(level, 6);
+      const exercises = await generateExercises(level, 6, category);
       set({ exercises, isLoading: false });
-    } catch (err) {
+    } catch {
       set({ error: 'Failed to load exercises. Make sure vocabulary is imported.', isLoading: false });
     }
   },
