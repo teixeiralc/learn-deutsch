@@ -1,0 +1,29 @@
+{
+  "name": "learn-deutsch-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "migrate": "npx tsx src/db/migrate.ts",
+    "seed": "npx tsx scripts/seed-grammar.ts",
+    "import:vocab": "npx tsx scripts/import-vocabulary.ts",
+    "import:sentences": "npx tsx scripts/import-sentences.ts",
+    "dedupe:vocab": "npx tsx scripts/dedupe-vocabulary.ts"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.6.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.10",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.0",
+    "tsx": "^4.15.6",
+    "typescript": "^5.4.5"
+  }
+}

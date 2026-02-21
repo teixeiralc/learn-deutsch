@@ -1,0 +1,98 @@
+german,english,part_of_speech,gender,plural,level,frequency_rank
+sein,to be,verb,,,A1,1
+haben,to have,verb,,,A1,2
+werden,to become,verb,,,A1,3
+können,can / to be able to,verb,,,A1,4
+müssen,must / to have to,verb,,,A1,5
+sagen,to say,verb,,,A1,6
+machen,to do / to make,verb,,,A1,7
+gehen,to go,verb,,,A1,8
+kommen,to come,verb,,,A1,9
+wollen,to want,verb,,,A1,10
+Mann,man,noun,der,Männer,A1,11
+Frau,woman,noun,die,Frauen,A1,12
+Kind,child,noun,das,Kinder,A1,13
+Haus,house,noun,das,Häuser,A1,14
+Auto,car,noun,das,Autos,A1,15
+Hund,dog,noun,der,Hunde,A1,16
+Katze,cat,noun,die,Katzen,A1,17
+Wasser,water,noun,das,,A1,18
+Brot,bread,noun,das,Brote,A1,19
+Milch,milk,noun,die,,A1,20
+groß,big / tall,adjective,,,A1,21
+klein,small / short,adjective,,,A1,22
+gut,good,adjective,,,A1,23
+schlecht,bad,adjective,,,A1,24
+neu,new,adjective,,,A1,25
+alt,old,adjective,,,A1,26
+ja,yes,adverb,,,A1,27
+nein,no,adverb,,,A1,28
+nicht,not,adverb,,,A1,29
+und,and,conjunction,,,A1,30
+aber,but,conjunction,,,A1,31
+oder,or,conjunction,,,A1,32
+in,in,preposition,,,A1,33
+auf,on / upon,preposition,,,A1,34
+mit,with,preposition,,,A1,35
+ich,I,pronoun,,,A1,36
+du,you (informal),pronoun,,,A1,37
+er,he,pronoun,,,A1,38
+sie,she / they,pronoun,,,A1,39
+wir,we,pronoun,,,A1,40
+Zeit,time,noun,die,Zeiten,A2,41
+Arbeit,work,noun,die,Arbeiten,A2,42
+Schule,school,noun,die,Schulen,A2,43
+Stadt,city,noun,die,Städte,A2,44
+Land,country,noun,das,Länder,A2,45
+Geld,money,noun,das,,A2,46
+Buch,book,noun,das,Bücher,A2,47
+Tisch,table,noun,der,Tische,A2,48
+Stuhl,chair,noun,der,Stühle,A2,49
+Fenster,window,noun,das,Fenster,A2,50
+kaufen,to buy,verb,,,A2,51
+verkaufen,to sell,verb,,,A2,52
+schreiben,to write,verb,,,A2,53
+lesen,to read,verb,,,A2,54
+essen,to eat,verb,,,A2,55
+trinken,to drink,verb,,,A2,56
+fahren,to drive / to travel,verb,,,A2,57
+wohnen,to live / to reside,verb,,,A2,58
+lernen,to learn,verb,,,A2,59
+spielen,to play,verb,,,A2,60
+schön,beautiful / nice,adjective,,,A2,61
+schwer,heavy / difficult,adjective,,,A2,62
+leicht,light / easy,adjective,,,A2,63
+schnell,fast,adjective,,,A2,64
+langsam,slow,adjective,,,A2,65
+teuer,expensive,adjective,,,A2,66
+billig,cheap,adjective,,,A2,67
+weil,because,conjunction,,,A2,68
+dass,that (conjunction),conjunction,,,A2,69
+wenn,when / if,conjunction,,,A2,70
+Wirtschaft,economy,noun,die,,B1,71
+Gesellschaft,society,noun,die,,B1,72
+Entwicklung,development,noun,die,Entwicklungen,B1,73
+Erfahrung,experience,noun,die,Erfahrungen,B1,74
+Möglichkeit,possibility,noun,die,Möglichkeiten,B1,75
+Verantwortung,responsibility,noun,die,,B1,76
+entscheiden,to decide,verb,,,B1,77
+erklären,to explain,verb,,,B1,78
+beschreiben,to describe,verb,,,B1,79
+bedeuten,to mean,verb,,,B1,80
+versuchen,to try / to attempt,verb,,,B1,81
+erreichen,to reach / to achieve,verb,,,B1,82
+wichtig,important,adjective,,,B1,83
+notwendig,necessary,adjective,,,B1,84
+möglich,possible,adjective,,,B1,85
+obwohl,although,conjunction,,,B1,86
+damit,so that / with it,conjunction,,,B1,87
+Zusammenhang,context / connection,noun,der,Zusammenhänge,B2,88
+Voraussetzung,prerequisite,noun,die,Voraussetzungen,B2,89
+Auswirkung,impact / effect,noun,die,Auswirkungen,B2,90
+beeinflussen,to influence,verb,,,B2,91
+berücksichtigen,to take into account,verb,,,B2,92
+gewährleisten,to ensure / to guarantee,verb,,,B2,93
+erheblich,considerable,adjective,,,B2,94
+grundlegend,fundamental,adjective,,,B2,95
+allerdings,however / admittedly,adverb,,,B2,96
+hingegen,on the other hand,adverb,,,B2,97

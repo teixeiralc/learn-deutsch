@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+dist/
+
+# Build/DB
+*.db
+*.db-shm
+*.db-wal
+audio/*.mp3
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log
