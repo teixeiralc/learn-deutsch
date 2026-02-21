@@ -15,6 +15,19 @@ function randomId(): string {
   return Math.random().toString(36).slice(2, 9);
 }
 
+const selectAudioFilename = db.prepare(`
+  SELECT audio_filename
+  FROM vocabulary_metadata
+  WHERE vocabulary_id = ?
+`);
+
+function getStoredAudioUrl(vocabularyId: number): string | undefined {
+  const row = selectAudioFilename.get(vocabularyId) as { audio_filename: string | null } | undefined;
+  const filename = row?.audio_filename?.trim();
+  if (!filename) return undefined;
+  return `/api/audio/${encodeURIComponent(filename)}`;
+}
+
 // ─── MCQ ─────────────────────────────────────────────────────────────────────
 
 function buildMCQ(word: Vocabulary, level: Level): GeneratedExercise {
@@ -169,6 +182,24 @@ function buildSentenceBuilding(word: Vocabulary, level: Level): GeneratedExercis
 // ─── Listening ───────────────────────────────────────────────────────────────
 
 function buildListening(word: Vocabulary, level: Level): GeneratedExercise {
+  const storedAudioUrl = getStoredAudioUrl(word.id);
+  if (storedAudioUrl) {
+    return {
+      id: randomId(),
+      type: 'listening',
+      question: 'Listen and type the German word you hear:',
+      correct_answer: word.german,
+      vocabulary_id: word.id,
+      hint: `${word.german.length} letters — it means "${word.english}"`,
+      explanation: `The audio says "${word.german}" (${word.english}).`,
+      metadata: {
+        audio_url: storedAudioUrl,
+        text_to_speak: word.german,
+        audio_source: 'stored_file',
+      },
+    };
+  }
+
   const sentence = db.prepare(`
     SELECT s.* FROM sentences s
     JOIN sentence_vocabulary sv ON s.id = sv.sentence_id
@@ -203,6 +234,7 @@ function buildSpeaking(word: Vocabulary, level: Level): GeneratedExercise {
     ORDER BY RANDOM() LIMIT 1
   `).get(word.id, level) as Sentence | undefined;
 
+  const storedAudioUrl = !sentence ? getStoredAudioUrl(word.id) : undefined;
   const german = sentence ? (sentence as Sentence).german : word.german;
   const english = sentence ? (sentence as Sentence).english : word.english;
 
@@ -216,7 +248,10 @@ function buildSpeaking(word: Vocabulary, level: Level): GeneratedExercise {
     sentence_id: (sentence as Sentence | undefined)?.id,
     hint: `${speakWords.length} word${speakWords.length > 1 ? 's' : ''} — English: "${english}"`,
     explanation: `The expected phrase is: "${german}"`,
-    metadata: { expected_german: german },
+    metadata: {
+      expected_german: german,
+      ...(storedAudioUrl ? { audio_url: storedAudioUrl, audio_source: 'stored_file' } : {}),
+    },
   };
 }
 

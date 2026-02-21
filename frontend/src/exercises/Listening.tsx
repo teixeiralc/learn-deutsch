@@ -27,19 +27,24 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
   const [playing, setPlaying] = useState(false);
   const [playCount, setPlayCount] = useState(0);
   const [focused, setFocused] = useState(false);
-  const { speak, error: ttsError } = useTTS();
+  const { speak, playUrl, error: ttsError } = useTTS();
 
   const textToSpeak = (exercise.metadata?.text_to_speak as string) ?? exercise.correct_answer;
+  const audioUrl = (exercise.metadata?.audio_url as string) ?? null;
 
   const handlePlay = () => {
-    speak(
-      textToSpeak,
-      () => setPlaying(true),
-      (didPlay) => {
-        setPlaying(false);
-        if (didPlay) setPlayCount(c => c + 1);
-      },
-    );
+    const handleStart = () => setPlaying(true);
+    const handleEnd = (didPlay: boolean) => {
+      setPlaying(false);
+      if (didPlay) setPlayCount(c => c + 1);
+    };
+
+    if (audioUrl) {
+      playUrl(audioUrl, handleStart, handleEnd);
+      return;
+    }
+
+    speak(textToSpeak, handleStart, handleEnd);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {

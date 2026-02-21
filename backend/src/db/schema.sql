@@ -13,6 +13,24 @@ CREATE TABLE IF NOT EXISTS vocabulary (
   UNIQUE(german, level)
 );
 
+-- One-to-many normalized meanings for each vocabulary item
+CREATE TABLE IF NOT EXISTS vocabulary_meanings (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  vocabulary_id INTEGER NOT NULL REFERENCES vocabulary(id) ON DELETE CASCADE,
+  meaning TEXT NOT NULL,
+  position INTEGER NOT NULL DEFAULT 0,
+  UNIQUE(vocabulary_id, meaning)
+);
+
+-- Optional metadata extracted from source decks/importers
+CREATE TABLE IF NOT EXISTS vocabulary_metadata (
+  vocabulary_id INTEGER PRIMARY KEY REFERENCES vocabulary(id) ON DELETE CASCADE,
+  audio_filename TEXT,
+  grammar_info TEXT,
+  related_words TEXT DEFAULT '[]', -- JSON array
+  source_note_id INTEGER
+);
+
 -- German/English sentence pairs
 CREATE TABLE IF NOT EXISTS sentences (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -90,6 +108,7 @@ INSERT OR IGNORE INTO user_stats (id) VALUES (1);
 
 -- Indexes for performance
 CREATE INDEX IF NOT EXISTS idx_vocabulary_level ON vocabulary(level);
+CREATE INDEX IF NOT EXISTS idx_vocab_meanings_vocab_id ON vocabulary_meanings(vocabulary_id);
 CREATE INDEX IF NOT EXISTS idx_sentences_level ON sentences(difficulty_level);
 CREATE INDEX IF NOT EXISTS idx_vocab_progress_review ON vocabulary_progress(next_review_date);
 CREATE INDEX IF NOT EXISTS idx_mistakes_created ON mistakes(created_at);

@@ -10,6 +10,7 @@
     "seed": "npx tsx scripts/seed-grammar.ts",
     "import:vocab": "npx tsx scripts/import-vocabulary.ts",
     "import:sentences": "npx tsx scripts/import-sentences.ts",
+    "import:anki": "npx tsx scripts/import-anki.ts",
     "dedupe:vocab": "npx tsx scripts/dedupe-vocabulary.ts"
   },
   "dependencies": {
