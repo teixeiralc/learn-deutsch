@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
-import HintReveal from './HintReveal';
+import HintRevealComponent from './HintRevealComponent'; 
 
 interface Props {
   exercise: GeneratedExercise;
@@ -29,7 +29,7 @@ export default function Translation({ exercise, onSubmit, result, isSubmitting }
         {exercise.question}
       </h2>
 
-      <HintReveal
+      <HintRevealComponent
         hint={exercise.hint}
         correctAnswer={exercise.correct_answer}
         hasResult={!!result}

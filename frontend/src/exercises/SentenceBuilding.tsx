@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
-import HintReveal from './HintReveal';
+import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -47,7 +47,7 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
       </h2>
       <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>Tap words to build the sentence</p>
 
-      <HintReveal
+      <HintRevealComponent
         hint={exercise.hint}
         correctAnswer={exercise.correct_answer}
         hasResult={!!result}

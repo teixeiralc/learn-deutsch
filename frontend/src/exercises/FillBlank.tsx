@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
-import HintReveal from './HintReveal';
+import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -34,7 +34,7 @@ export default function FillBlank({ exercise, onSubmit, result, isSubmitting }: 
       </h2>
       {hint && <p style={{ color: 'var(--text-muted)', fontSize: 13, marginBottom: 12, fontStyle: 'italic' }}>{hint}</p>}
 
-      <HintReveal
+      <HintRevealComponent
         hint={exercise.hint}
         correctAnswer={exercise.correct_answer}
         hasResult={!!result}

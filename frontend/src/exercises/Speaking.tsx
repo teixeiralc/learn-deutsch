@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
 import { useTTS } from '../hooks/useTTS';
-import HintReveal from './HintReveal';
+import HintRevealComponent from './HintRevealComponent'; 
 
 interface Props {
   exercise: GeneratedExercise;
@@ -72,7 +72,7 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
         </button>
       </div>
 
-      <HintReveal
+      <HintRevealComponent
         hint={exercise.hint}
         correctAnswer={exercise.correct_answer}
         hasResult={!!result}

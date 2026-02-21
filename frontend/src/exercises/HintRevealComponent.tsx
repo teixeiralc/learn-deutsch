@@ -7,7 +7,7 @@ interface Props {
   onReveal: () => void;
 }
 
-export default function HintReveal({ hint, correctAnswer, hasResult, onReveal }: Props) {
+export default function HintRevealComponent({ hint, correctAnswer, hasResult, onReveal }: Props) {
   const [showHint, setShowHint] = useState(false);
   const [revealed, setRevealed] = useState(false);
 
