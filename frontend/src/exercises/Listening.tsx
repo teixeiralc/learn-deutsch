@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
 import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
@@ -59,9 +60,12 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
-        {exercise.question}
-      </h2>
+      <ExerciseHeader
+        title={exercise.question}
+        onSpeak={handlePlay}
+        isSpeaking={playing}
+        marginBottom={8}
+      />
       <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>Listen carefully and type what you hear</p>
 
       <HintRevealComponent

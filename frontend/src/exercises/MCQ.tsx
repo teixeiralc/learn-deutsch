@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import { useTTS } from '../hooks/useTTS';
+import ExerciseHeader from './ExerciseHeader';
 import HintRevealComponent from './HintRevealComponent';
 
 interface Props {
@@ -11,6 +13,19 @@ interface Props {
 
 export default function MCQ({ exercise, onSubmit, result, isSubmitting }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const { speak, error: ttsError } = useTTS();
+
+  const speakText = (exercise.metadata?.speak_text as string | undefined)?.trim() || null;
+
+  const handleSpeak = () => {
+    if (!speakText) return;
+    speak(
+      speakText,
+      () => setPlaying(true),
+      () => setPlaying(false),
+    );
+  };
 
   const handleSelect = async (option: string) => {
     if (result || isSubmitting) return;
@@ -38,9 +53,16 @@ export default function MCQ({ exercise, onSubmit, result, isSubmitting }: Props)
 
   return (
     <div>
-      <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 12 }}>
-        {exercise.question}
-      </h2>
+      <ExerciseHeader
+        title={exercise.question}
+        onSpeak={speakText ? handleSpeak : undefined}
+        isSpeaking={playing}
+        marginBottom={12}
+      />
+
+      {ttsError && (
+        <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginBottom: 12 }}>{ttsError}</p>
+      )}
 
       <HintRevealComponent
         hint={exercise.hint}
