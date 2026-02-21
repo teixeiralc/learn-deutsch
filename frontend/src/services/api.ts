@@ -12,6 +12,10 @@ import type {
   LessonResult,
   CompleteLessonResponse,
   ExerciseType,
+  RoadMapResponse,
+  StartRoadNodeResponse,
+  CompleteRoadNodeResponse,
+  RoadCheckpointResponse,
 } from '../types';
 
 const api = axios.create({ baseURL: '/api' });
@@ -59,3 +63,36 @@ export const getLessonProgress = () =>
 
 export const completeLesson = (level: Level, score: number, total_exercises: number) =>
   api.post<CompleteLessonResponse>('/progress/complete-lesson', { level, score, total_exercises }).then(r => r.data);
+
+// ─── Road Mode ───────────────────────────────────────────────────────────────
+
+export const getRoadMap = (level: Level, params?: { page?: number; pageSize?: number; hideCompleted?: boolean }) =>
+  api.get<RoadMapResponse>(`/road/${level}`, { params }).then(r => r.data);
+
+export const startRoadNode = (nodeId: number) =>
+  api.post<StartRoadNodeResponse>(`/road/node/${nodeId}/start`).then(r => r.data);
+
+export const checkpointRoadNode = (
+  nodeId: number,
+  payload: {
+    run_id: number;
+    exercise_index: number;
+    is_correct: boolean;
+    exercise_type: ExerciseType;
+  }
+) => api.post<RoadCheckpointResponse>(`/road/node/${nodeId}/checkpoint`, payload).then(r => r.data);
+
+export const completeRoadNode = (
+  nodeId: number,
+  payload: {
+    run_id?: number;
+    correct?: number;
+    total?: number;
+    reading_correct?: number;
+    reading_total?: number;
+    listening_correct?: number;
+    listening_total?: number;
+    speaking_correct?: number;
+    speaking_total?: number;
+  }
+) => api.post<CompleteRoadNodeResponse>(`/road/node/${nodeId}/complete`, payload).then(r => r.data);

@@ -10,6 +10,9 @@ export type ExerciseType =
 
 export type ExerciseCategory = 'all' | 'grammar' | 'listening' | 'speaking';
 
+export type RoadNodeType = 'vocab' | 'context' | 'conversation';
+export type RoadNodeStatus = 'locked' | 'unlocked' | 'in_progress' | 'completed';
+
 export interface Vocabulary {
   id: number;
   german: string;
@@ -100,4 +103,78 @@ export interface CompleteLessonResponse {
   total_xp: number;
   streak: number;
   sessions_completed: number;
+}
+
+export interface RoadTurn {
+  turn_order: number;
+  speaker: 'A' | 'B';
+  german: string;
+  english: string;
+  focus_word: string;
+}
+
+export interface RoadNodeSummary {
+  id: number;
+  node_order: number;
+  node_type: RoadNodeType;
+  title: string;
+  description: string;
+  chapter_id: number;
+  chapter_order: number;
+  chapter_title: string;
+  chapter_description: string;
+  story_track_slug: string;
+  story_track_title: string;
+  status: RoadNodeStatus;
+  unlocked: boolean;
+  stars: number;
+  best_score: number;
+  attempts: number;
+}
+
+export interface RoadMapResponse {
+  level: Level;
+  nodes: RoadNodeSummary[];
+  page: number;
+  page_size: number;
+  total_pages: number;
+  total_stories: number;
+  visible_stories: number;
+  completed_stories: number;
+  total_nodes: number;
+  completed_nodes: number;
+  remaining_nodes: number;
+  hide_completed: boolean;
+}
+
+export interface StartRoadNodeResponse {
+  node: RoadNodeSummary;
+  turns: RoadTurn[];
+  exercises: GeneratedExercise[];
+  run_id: number;
+  current_index: number;
+}
+
+export interface RoadCheckpointResponse {
+  run_id: number;
+  current_index: number;
+  is_last: boolean;
+}
+
+export interface CompleteRoadNodeResponse {
+  passed: boolean;
+  stars: number;
+  score: number;
+  thresholds?: {
+    reading: { passed: boolean; accuracy: number; required: number };
+    listening: { passed: boolean; accuracy: number; required: number };
+    speaking: {
+      passed: boolean;
+      accuracy: number;
+      attempts: number;
+      required_accuracy: number;
+      required_attempts: number;
+    };
+  };
+  node?: RoadNodeSummary;
 }

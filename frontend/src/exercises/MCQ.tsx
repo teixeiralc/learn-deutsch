@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
 import { useTTS } from '../hooks/useTTS';
 import ExerciseHeader from './ExerciseHeader';
@@ -17,6 +17,10 @@ export default function MCQ({ exercise, onSubmit, result, isSubmitting }: Props)
   const { speak, error: ttsError } = useTTS();
 
   const speakText = (exercise.metadata?.speak_text as string | undefined)?.trim() || null;
+
+  useEffect(() => {
+    setSelected(null);
+  }, [exercise.id]);
 
   const handleSpeak = () => {
     if (!speakText) return;

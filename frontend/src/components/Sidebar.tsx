@@ -28,6 +28,15 @@ function DashIcon() {
     </svg>
   );
 }
+function RoadIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M4 19c3-6 13-6 16-12"/>
+      <circle cx="4" cy="19" r="2"/>
+      <circle cx="20" cy="7" r="2"/>
+    </svg>
+  );
+}
 function BookIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -85,7 +94,8 @@ export default function Sidebar() {
       className="animate-slide-in"
       style={{
         width: 220,
-        minHeight: '100vh',
+        height: '100vh',
+        overflowY: 'auto',
         background: 'linear-gradient(180deg, var(--sidebar-from) 0%, var(--sidebar-to) 100%)',
         borderRight: '1px solid var(--sidebar-border)',
         display: 'flex',
@@ -191,7 +201,8 @@ export default function Sidebar() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <p style={{ fontSize: 10, fontWeight: 600, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', padding: '0 6px', marginBottom: 4 }}>Navigate</p>
         {[
-          { to: '/', icon: <DashIcon />, label: 'Dashboard', end: true },
+          { to: '/', icon: <RoadIcon />, label: 'Road', end: true },
+          { to: '/practice', icon: <DashIcon />, label: 'Practice', end: true },
           { to: '/vocabulary', icon: <BookIcon />, label: 'Vocabulary', end: false },
         ].map(({ to, icon, label, end }) => (
           <NavLink

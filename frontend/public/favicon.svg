@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <clipPath id="squircle">
+      <rect x="0" y="0" width="100" height="100" rx="25" ry="25" />
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#squircle)">
+    <rect x="0" y="0" width="100" height="33.5" fill="#000000" />
+    <rect x="0" y="33" width="100" height="34" fill="#E2001A" />
+    <rect x="0" y="66" width="100" height="34" fill="#FFCE00" />
+  </g>
+</svg>

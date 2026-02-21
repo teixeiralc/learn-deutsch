@@ -127,3 +127,25 @@ export interface EvaluateSpeakingResponse {
   feedback: string;
   token_comparison: Array<{ word: string; correct: boolean }>;
 }
+
+export type RoadNodeType = 'vocab' | 'context' | 'conversation';
+export type RoadNodeStatus = 'locked' | 'unlocked' | 'in_progress' | 'completed';
+
+export interface RoadNodeSummary {
+  id: number;
+  node_order: number;
+  node_type: RoadNodeType;
+  title: string;
+  description: string;
+  chapter_id: number;
+  chapter_order: number;
+  chapter_title: string;
+  chapter_description: string;
+  story_track_slug: string;
+  story_track_title: string;
+  status: RoadNodeStatus;
+  unlocked: boolean;
+  stars: number;
+  best_score: number;
+  attempts: number;
+}

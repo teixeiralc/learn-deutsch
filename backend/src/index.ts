@@ -9,6 +9,7 @@ import exercisesRouter from './routes/exercises.js';
 import progressRouter from './routes/progress.js';
 import ttsRouter from './routes/tts.js';
 import audioRouter from './routes/audio.js';
+import roadRouter from './routes/road.js';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -28,6 +29,7 @@ app.use('/api/exercises', exercisesRouter);
 app.use('/api/progress', progressRouter);
 app.use('/api/tts', ttsRouter);
 app.use('/api/audio', audioRouter);
+app.use('/api/road', roadRouter);
 app.use('/api', progressRouter); // for /api/stats
 
 // Health check
