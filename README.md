@@ -1,11 +1,11 @@
 # Learn Deutsch 🇩🇪
 
-A Duolingo-style German learning app with **zero external dependencies** — no AI, no cloud services, no API keys.
+A Duolingo-style German learning app with a local SQLite backend and ElevenLabs-powered pronunciation audio.
 
 ### Features
 - 🧠 **SM-2 spaced repetition** — Anki-level scheduling
 - 🎯 **6 exercise types** — MCQ, fill-blank, translation, sentence building, listening, speaking
-- 🎧 **Browser TTS** — native `speechSynthesis` for listening exercises
+- 🎧 **ElevenLabs TTS** — high-quality pronunciation for listening and speaking prompts
 - 🎤 **Web Speech API** — Chrome speech recognition for speaking
 - 🔥 **XP & streak tracking**
 - 📚 **Vocabulary browser** with progress scores
@@ -18,6 +18,7 @@ A Duolingo-style German learning app with **zero external dependencies** — no 
 ### Prerequisites
 - Node.js 18+
 - npm 9+
+- ElevenLabs API key
 
 ### 1. Clone & install
 
@@ -35,7 +36,7 @@ cd frontend && npm install && cd ..
 
 ```bash
 cp backend/.env.example backend/.env
-# No API keys needed — just check the path is correct
+# Add your ElevenLabs key to backend/.env
 ```
 
 ### 3. Setup database & seed data
@@ -83,7 +84,7 @@ learn-deutsch/
 │   ├── src/
 │   │   ├── components/  # Layout, Sidebar, ProgressBar, loaders
 │   │   ├── exercises/   # MCQ, FillBlank, Translation, SentenceBuilding, Listening, Speaking
-│   │   ├── hooks/       # useSpeechRecognition
+│   │   ├── hooks/       # useSpeechRecognition, useTTS
 │   │   ├── pages/       # Dashboard, Lesson, Results, Vocabulary
 │   │   ├── services/    # Axios API client
 │   │   ├── stores/      # Zustand (appStore, lessonStore)

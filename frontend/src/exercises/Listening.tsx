@@ -27,7 +27,7 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
   const [playing, setPlaying] = useState(false);
   const [playCount, setPlayCount] = useState(0);
   const [focused, setFocused] = useState(false);
-  const { speak } = useTTS();
+  const { speak, error: ttsError } = useTTS();
 
   const textToSpeak = (exercise.metadata?.text_to_speak as string) ?? exercise.correct_answer;
 
@@ -35,7 +35,10 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
     speak(
       textToSpeak,
       () => setPlaying(true),
-      () => { setPlaying(false); setPlayCount(c => c + 1); },
+      (didPlay) => {
+        setPlaying(false);
+        if (didPlay) setPlayCount(c => c + 1);
+      },
     );
   };
 
@@ -93,6 +96,10 @@ export default function Listening({ exercise, onSubmit, result, isSubmitting }: 
           <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 2 }}>German pronunciation ({playCount} plays)</p>
         </div>
       </button>
+
+      {ttsError && (
+        <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginTop: -10, marginBottom: 12 }}>{ttsError}</p>
+      )}
 
       {playCount > 0 && (
         <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>

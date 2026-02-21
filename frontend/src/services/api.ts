@@ -46,6 +46,9 @@ export const submitAnswer = (payload: {
 export const evaluateSpeaking = (expected_sentence: string, user_transcript: string) =>
   api.post<SpeakingEvalResponse>('/exercises/evaluate-speaking', { expected_sentence, user_transcript }).then(r => r.data);
 
+export const synthesizeSpeech = (text: string, voiceId?: string, signal?: AbortSignal) =>
+  api.post('/tts', { text, voiceId }, { responseType: 'arraybuffer', signal }).then(r => r.data as ArrayBuffer);
+
 // ─── Progress & Stats ─────────────────────────────────────────────────────────
 
 export const getStats = () =>

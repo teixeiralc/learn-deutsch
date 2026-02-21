@@ -24,7 +24,7 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
   const [hasPlayed, setHasPlayed] = useState(false);
   const [playing, setPlaying] = useState(false);
   const { isListening, transcript, startListening, stopListening, isSupported } = useSpeechRecognition();
-  const { speak } = useTTS();
+  const { speak, error: ttsError } = useTTS();
 
   // Extract the German text from the question (format: "Say this sentence aloud:\n"text" (english)")
   const germanText = (exercise.metadata?.expected_german as string) ?? exercise.correct_answer;
@@ -33,7 +33,10 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
     speak(
       germanText,
       () => setPlaying(true),
-      () => { setPlaying(false); setHasPlayed(true); },
+      (didPlay) => {
+        setPlaying(false);
+        if (didPlay) setHasPlayed(true);
+      },
     );
   };
 
@@ -70,6 +73,7 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
         >
           ▶ {playing ? 'Playing…' : hasPlayed ? 'Play again' : 'Hear pronunciation'}
         </button>
+        {ttsError && <p style={{ fontSize: 12, color: 'var(--accent-red-br)', marginTop: 8 }}>{ttsError}</p>}
       </div>
 
       <HintRevealComponent
