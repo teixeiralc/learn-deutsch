@@ -1,5 +1,5 @@
 import db from '../db/database.js';
-import type { GeneratedExercise, Level, Vocabulary, Sentence } from '../types/index.js';
+import type { GeneratedExercise, ExerciseCategory, Level, Vocabulary, Sentence } from '../types/index.js';
 import { getWordsForReview, ensureVocabProgressRows } from './learning-engine.js';
 
 function shuffle<T>(arr: T[]): T[] {
@@ -36,6 +36,7 @@ function buildMCQ(word: Vocabulary, level: Level): GeneratedExercise {
     correct_answer: word.english,
     options,
     vocabulary_id: word.id,
+    hint: `Starts with "${word.english[0].toUpperCase()}" (${word.part_of_speech})`,
     explanation: `"${word.german}" means "${word.english}". ${word.part_of_speech}${word.gender ? `, ${word.gender}` : ''}.`,
   };
 }
@@ -62,6 +63,7 @@ function buildFillBlank(word: Vocabulary, level: Level): GeneratedExercise {
       correct_answer: word.german,
       vocabulary_id: word.id,
       sentence_id: sentence.id,
+      hint: `${word.german.length} letters — it means "${word.english}"`,
       explanation: `The missing word is "${word.german}" (${word.english}). Full sentence: "${sentence.german}"`,
     };
   }
@@ -74,6 +76,7 @@ function buildFillBlank(word: Vocabulary, level: Level): GeneratedExercise {
     question: `Fill in the blank: "${article}_____" means "${word.english}"`,
     correct_answer: word.german,
     vocabulary_id: word.id,
+    hint: `${word.german.length} letters — starts with "${word.german[0]}"`,
     explanation: `The answer is "${word.german}" which means "${word.english}".`,
   };
 }
@@ -90,15 +93,17 @@ function buildTranslation(word: Vocabulary, level: Level): GeneratedExercise {
 
   if (sentence) {
     const useGermanToEnglish = Math.random() > 0.5;
+    const correctAnswer = useGermanToEnglish ? sentence.english : sentence.german;
     return {
       id: randomId(),
       type: 'translation',
       question: useGermanToEnglish
         ? `Translate to English: "${sentence.german}"`
         : `Translate to German: "${sentence.english}"`,
-      correct_answer: useGermanToEnglish ? sentence.english : sentence.german,
+      correct_answer: correctAnswer,
       vocabulary_id: word.id,
       sentence_id: sentence.id,
+      hint: `Key word: "${word.german}" = "${word.english}"`,
       explanation: `"${sentence.german}" = "${sentence.english}"`,
     };
   }
@@ -110,6 +115,7 @@ function buildTranslation(word: Vocabulary, level: Level): GeneratedExercise {
     question: `Translate to English: "${word.german}"`,
     correct_answer: word.english,
     vocabulary_id: word.id,
+    hint: `Starts with "${word.english[0].toUpperCase()}" — it's a ${word.part_of_speech}`,
     explanation: `"${word.german}" translates to "${word.english}".`,
   };
 }
@@ -140,6 +146,7 @@ function buildSentenceBuilding(word: Vocabulary, level: Level): GeneratedExercis
       options: shuffled,
       sentence_id: target.id,
       vocabulary_id: word.id,
+      hint: `${tokens.length} words — starts with "${tokens[0]}"`,
       explanation: `The correct sentence is: "${target.german}"`,
       metadata: { tokens, shuffled },
     };
@@ -154,6 +161,7 @@ function buildSentenceBuilding(word: Vocabulary, level: Level): GeneratedExercis
     correct_answer: tokens.join(' '),
     options: shuffle(tokens),
     vocabulary_id: word.id,
+    hint: `${tokens.length} words — starts with "${tokens[0]}"`,
     explanation: `The correct sentence is: "${tokens.join(' ')}"`,
   };
 }
@@ -170,15 +178,18 @@ function buildListening(word: Vocabulary, level: Level): GeneratedExercise {
 
   const target = sentence || { german: word.german, english: word.english };
 
+  const textToSpeak = (target as Sentence).german ?? word.german;
+  const wordCount = textToSpeak.split(' ').length;
   return {
     id: randomId(),
     type: 'listening',
     question: `Listen and type what you hear:`,
-    correct_answer: (target as Sentence).german ?? word.german,
+    correct_answer: textToSpeak,
     vocabulary_id: word.id,
     sentence_id: (target as Sentence).id,
-    explanation: `You heard: "${(target as Sentence).german ?? word.german}"`,
-    metadata: { text_to_speak: (target as Sentence).german ?? word.german },
+    hint: `${wordCount} word${wordCount > 1 ? 's' : ''} — first word starts with "${textToSpeak[0].toUpperCase()}"`,
+    explanation: `You heard: "${textToSpeak}"`,
+    metadata: { text_to_speak: textToSpeak },
   };
 }
 
@@ -195,6 +206,7 @@ function buildSpeaking(word: Vocabulary, level: Level): GeneratedExercise {
   const german = sentence ? (sentence as Sentence).german : word.german;
   const english = sentence ? (sentence as Sentence).english : word.english;
 
+  const speakWords = german.split(' ');
   return {
     id: randomId(),
     type: 'speaking',
@@ -202,6 +214,7 @@ function buildSpeaking(word: Vocabulary, level: Level): GeneratedExercise {
     correct_answer: german,
     vocabulary_id: word.id,
     sentence_id: (sentence as Sentence | undefined)?.id,
+    hint: `${speakWords.length} word${speakWords.length > 1 ? 's' : ''} — English: "${english}"`,
     explanation: `The expected phrase is: "${german}"`,
     metadata: { expected_german: german },
   };
@@ -218,7 +231,14 @@ const EXERCISE_TYPES: Array<(w: Vocabulary, l: Level) => GeneratedExercise> = [
   buildSpeaking,
 ];
 
-export function generateExercises(level: Level, count: number = 5): GeneratedExercise[] {
+const CATEGORY_MAP: Record<ExerciseCategory, Array<(w: Vocabulary, l: Level) => GeneratedExercise>> = {
+  grammar:   [buildMCQ, buildFillBlank, buildTranslation, buildSentenceBuilding],
+  listening: [buildListening],
+  speaking:  [buildSpeaking],
+  all:       [buildMCQ, buildFillBlank, buildTranslation, buildSentenceBuilding, buildListening, buildSpeaking],
+};
+
+export function generateExercises(level: Level, count: number = 5, category: ExerciseCategory = 'all'): GeneratedExercise[] {
   const words = getWordsForReview(level, count);
 
   if (words.length === 0) {
@@ -229,25 +249,17 @@ export function generateExercises(level: Level, count: number = 5): GeneratedExe
   ensureVocabProgressRows(words.map(w => w.id));
 
   const exercises: GeneratedExercise[] = [];
+  const types = CATEGORY_MAP[category];
 
-  // One of each type, cycling through available words
-  const types = [buildMCQ, buildFillBlank, buildTranslation, buildSentenceBuilding, buildListening, buildSpeaking];
-
-  for (let i = 0; i < Math.min(count, words.length, types.length); i++) {
+  for (let i = 0; i < count; i++) {
     const word = words[i % words.length] as Vocabulary;
     const builder = types[i % types.length];
     try {
       exercises.push(builder(word, level));
     } catch {
-      // fallback to mcq
-      exercises.push(buildMCQ(word, level));
+      // fallback to first type in category
+      exercises.push(types[0](word, level));
     }
-  }
-
-  // If more exercises requested than types, fill with MCQ on different words
-  while (exercises.length < count && exercises.length < words.length) {
-    const word = words[exercises.length] as Vocabulary;
-    exercises.push(buildMCQ(word, level));
   }
 
   return exercises.slice(0, count);

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import HintReveal from './HintReveal';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -27,14 +28,20 @@ export default function Translation({ exercise, onSubmit, result, isSubmitting }
       <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
         {exercise.question}
       </h2>
-      <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 24 }}>Translate this sentence to English</p>
 
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+      <HintReveal
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => { if (!result && !isSubmitting) onSubmit('[revealed]'); }}
+      />
+
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 16 }}>
         <textarea
           value={answer}
           onChange={e => setAnswer(e.target.value)}
           disabled={!!result || isSubmitting}
-          placeholder="Type your English translation…"
+          placeholder="Type your translation…"
           rows={3}
           autoFocus
           onFocus={() => setFocused(true)}

@@ -4,6 +4,7 @@ import type {
   VocabularyWithProgress,
   GeneratedExercise,
   Level,
+  ExerciseCategory,
   GrammarTopic,
   SubmitAnswerResponse,
   SpeakingEvalResponse,
@@ -30,8 +31,8 @@ export const getGrammarTopics = (level?: Level) =>
 
 // ─── Exercises ────────────────────────────────────────────────────────────────
 
-export const generateExercises = (level: Level, count = 5) =>
-  api.post<GeneratedExercise[]>('/exercises/generate', { level, count }).then(r => r.data);
+export const generateExercises = (level: Level, count = 5, category: ExerciseCategory = 'all') =>
+  api.post<GeneratedExercise[]>('/exercises/generate', { level, count, category }).then(r => r.data);
 
 export const submitAnswer = (payload: {
   type: ExerciseType;

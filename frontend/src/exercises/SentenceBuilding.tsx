@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
+import HintReveal from './HintReveal';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -12,15 +13,8 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
   const words: string[] = exercise.options ?? [];
   const [selected, setSelected] = useState<string[]>([]);
 
-  const available = words.filter((w, i) => !selected.includes(w) || words.indexOf(w) !== i
-    ? !selected.slice(0, selected.filter(s => s === w).length + 1).includes(w)
-    : false
-  );
-
-  // Proper multi-instance tracking
   const wordPool = [...words];
   const usedIndices = new Set<number>();
-  const getAvailable = () => wordPool.filter((_, idx) => !usedIndices.has(idx));
 
   const addWord = (word: string) => {
     if (result || isSubmitting) return;
@@ -51,11 +45,18 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
       <h2 style={{ fontSize: 22, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.4, marginBottom: 8 }}>
         {exercise.question}
       </h2>
-      <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 20 }}>Tap words to build the sentence</p>
+      <p style={{ fontSize: 13, color: 'var(--text-muted)', marginBottom: 12 }}>Tap words to build the sentence</p>
+
+      <HintReveal
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => { if (!result && !isSubmitting) onSubmit('[revealed]'); }}
+      />
 
       {/* Assembly area */}
       <div style={{
-        minHeight: 56, padding: '12px 14px', borderRadius: 13, marginBottom: 18,
+        minHeight: 56, padding: '12px 14px', borderRadius: 13, marginBottom: 18, marginTop: 16,
         background: result
           ? isCorrect ? 'var(--accent-green-bg)' : 'var(--accent-red-bg)'
           : 'var(--bg-input)',
@@ -101,7 +102,7 @@ export default function SentenceBuilding({ exercise, onSubmit, result, isSubmitt
                 key={i} onClick={() => !isUsed && addWord(word)} disabled={isUsed || !!result || isSubmitting}
                 style={{
                   ...wordBtnBase,
-                  background: isUsed ? 'var(--bg-card)' : 'var(--bg-card)',
+                  background: 'var(--bg-card)',
                   border: `1px solid ${isUsed ? 'var(--border-subtle)' : 'var(--border-strong)'}`,
                   color: isUsed ? 'var(--text-faint)' : 'var(--text-primary)',
                   opacity: isUsed ? 0.4 : 1,

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import type { GeneratedExercise, SubmitAnswerResponse } from '../types';
 import { useSpeechRecognition } from '../hooks/useSpeechRecognition';
+import { useTTS } from '../hooks/useTTS';
+import HintReveal from './HintReveal';
 
 interface Props {
   exercise: GeneratedExercise;
@@ -9,7 +11,7 @@ interface Props {
   isSubmitting: boolean;
 }
 
-function MicIcon({ active }: { active: boolean }) {
+function MicIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
@@ -22,15 +24,17 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
   const [hasPlayed, setHasPlayed] = useState(false);
   const [playing, setPlaying] = useState(false);
   const { isListening, transcript, startListening, stopListening, isSupported } = useSpeechRecognition();
+  const { speak } = useTTS();
 
-  const speak = () => {
-    if (!('speechSynthesis' in window)) return;
-    window.speechSynthesis.cancel();
-    const utt = new SpeechSynthesisUtterance(exercise.question);
-    utt.lang = 'de-DE'; utt.rate = 0.85;
-    utt.onstart = () => setPlaying(true);
-    utt.onend = () => { setPlaying(false); setHasPlayed(true); };
-    window.speechSynthesis.speak(utt);
+  // Extract the German text from the question (format: "Say this sentence aloud:\n"text" (english)")
+  const germanText = (exercise.metadata?.expected_german as string) ?? exercise.correct_answer;
+
+  const handleSpeak = () => {
+    speak(
+      germanText,
+      () => setPlaying(true),
+      () => { setPlaying(false); setHasPlayed(true); },
+    );
   };
 
   useEffect(() => {
@@ -40,7 +44,6 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
   }, [isListening]);
 
   const handleMic = () => isListening ? stopListening() : startListening();
-
   const skip = () => onSubmit('[skipped]');
 
   return (
@@ -51,12 +54,12 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
 
       {/* German sentence */}
       <div style={{
-        padding: '18px 22px', borderRadius: 14, marginBottom: 24,
+        padding: '18px 22px', borderRadius: 14, marginBottom: 16,
         background: 'var(--bg-card)', border: '1px solid var(--border-muted)',
       }}>
-        <p style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.5 }}>{exercise.question}</p>
+        <p style={{ fontSize: 20, fontWeight: 700, color: 'var(--text-primary)', lineHeight: 1.5 }}>{germanText}</p>
         <button
-          onClick={speak}
+          onClick={handleSpeak}
           style={{
             marginTop: 10, display: 'inline-flex', alignItems: 'center', gap: 6,
             padding: '5px 12px', borderRadius: 99, border: 'none', cursor: 'pointer', fontFamily: 'inherit',
@@ -65,14 +68,21 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
             transition: 'all 0.2s ease',
           }}
         >
-          ▶ {playing ? 'Playing…' : 'Hear pronunciation'}
+          ▶ {playing ? 'Playing…' : hasPlayed ? 'Play again' : 'Hear pronunciation'}
         </button>
       </div>
+
+      <HintReveal
+        hint={exercise.hint}
+        correctAnswer={exercise.correct_answer}
+        hasResult={!!result}
+        onReveal={() => { if (!result && !isSubmitting) onSubmit('[revealed]'); }}
+      />
 
       {isSupported ? (
         <>
           {/* Mic button */}
-          <div style={{ textAlign: 'center', marginBottom: 20 }}>
+          <div style={{ textAlign: 'center', marginBottom: 20, marginTop: 16 }}>
             <button
               onClick={handleMic}
               disabled={!!result || isSubmitting}
@@ -87,7 +97,7 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
                 transition: 'all 0.2s ease',
               }}
             >
-              <MicIcon active={isListening} />
+              <MicIcon />
             </button>
             <p style={{ color: 'var(--text-muted)', fontSize: 12, marginTop: 10 }}>
               {isListening ? 'Listening… tap to stop' : result ? 'Done' : 'Tap to speak'}
@@ -116,7 +126,7 @@ export default function Speaking({ exercise, onSubmit, result, isSubmitting }: P
           )}
         </>
       ) : (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', marginTop: 16 }}>
           <p style={{ color: 'var(--text-muted)', fontSize: 14, marginBottom: 14 }}>Speech recognition not available in your browser.</p>
           <button onClick={skip} style={{
             padding: '12px 24px', borderRadius: 12, border: 'none', cursor: 'pointer',

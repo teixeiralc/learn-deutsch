@@ -80,6 +80,8 @@ export type ExerciseType =
   | 'listening'
   | 'speaking';
 
+export type ExerciseCategory = 'all' | 'grammar' | 'listening' | 'speaking';
+
 export interface GeneratedExercise {
   id: string; // ephemeral, for the session
   type: ExerciseType;
@@ -89,6 +91,7 @@ export interface GeneratedExercise {
   sentence_id?: number;
   vocabulary_id?: number;
   explanation: string;
+  hint?: string;
   metadata?: Record<string, unknown>;
 }
 
@@ -110,6 +113,7 @@ export interface SubmitAnswerResponse {
 export interface GenerateExercisesRequest {
   level: Level;
   count?: number;
+  category?: ExerciseCategory;
 }
 
 export interface EvaluateSpeakingRequest {

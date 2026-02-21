@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { useAppStore } from '../stores/appStore';
 import { useLessonStore } from '../stores/lessonStore';
-import type { Level, LessonResult } from '../types';
+import type { ExerciseCategory, Level, LessonResult } from '../types';
 
 const LEVELS: Level[] = ['A1', 'A2', 'B1', 'B2'];
 
@@ -11,6 +11,13 @@ const LEVEL_CFG: Record<Level, { color: string; label: string; sublabel: string 
   B1: { color: '#f59e0b', label: 'B1', sublabel: 'Intermediate' },
   B2: { color: '#f87171', label: 'B2', sublabel: 'Upper Intermediate' },
 };
+
+const CATEGORIES: { id: ExerciseCategory; label: string; icon: string; desc: string }[] = [
+  { id: 'all',       label: 'All',       icon: '✦', desc: 'Mix of all types' },
+  { id: 'grammar',   label: 'Grammar',   icon: '📝', desc: 'MCQ, Fill-in, Translation, Sentence' },
+  { id: 'listening', label: 'Listening', icon: '🎧', desc: 'Audio comprehension' },
+  { id: 'speaking',  label: 'Speaking',  icon: '🎙️', desc: 'Pronunciation practice' },
+];
 
 function StatCard({ value, label, color }: { value: number | string; label: string; color: string }) {
   return (
@@ -27,7 +34,7 @@ function StatCard({ value, label, color }: { value: number | string; label: stri
 
 function LevelCard({ level, result }: { level: Level; result?: LessonResult }) {
   const navigate = useNavigate();
-  const loadExercises = useLessonStore(s => s.loadExercises);
+  const { loadExercises } = useLessonStore();
   const { color, label, sublabel } = LEVEL_CFG[level];
   const pct = result ? Math.round((result.best_score / result.total_exercises) * 100) : 0;
 
@@ -89,6 +96,7 @@ function LevelCard({ level, result }: { level: Level; result?: LessonResult }) {
 
 export default function Dashboard() {
   const { stats, lessonHistory, isLoadingStats, fetchStats } = useAppStore();
+  const { category, setCategory } = useLessonStore();
   const getResult = (level: Level) => lessonHistory.find(r => r.lesson_level === level);
 
   return (
@@ -102,6 +110,45 @@ export default function Dashboard() {
         <StatCard value={stats?.total_xp ?? 0} label="Total XP" color="#f59e0b" />
         <StatCard value={`${stats?.streak ?? 0}${stats?.streak ? ' 🔥' : ''}`} label="Day Streak" color="#f97316" />
         <StatCard value={stats?.sessions_completed ?? 0} label="Sessions" color="#38bdf8" />
+      </div>
+
+      {/* Exercise Type Picker */}
+      <div style={{ marginBottom: 32 }}>
+        <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: 12 }}>
+          Exercise Focus
+        </p>
+        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
+          {CATEGORIES.map(cat => {
+            const active = category === cat.id;
+            return (
+              <button
+                key={cat.id}
+                onClick={() => setCategory(cat.id)}
+                title={cat.desc}
+                style={{
+                  display: 'flex', alignItems: 'center', gap: 7,
+                  padding: '8px 16px', borderRadius: 99, cursor: 'pointer', fontFamily: 'inherit',
+                  fontSize: 13, fontWeight: active ? 700 : 500,
+                  border: active ? '1px solid rgba(245,158,11,0.5)' : '1px solid var(--border-muted)',
+                  background: active ? 'rgba(245,158,11,0.12)' : 'var(--bg-card)',
+                  color: active ? '#f59e0b' : 'var(--text-secondary)',
+                  transition: 'all 0.18s ease',
+                  boxShadow: active ? '0 0 0 2px rgba(245,158,11,0.12)' : 'none',
+                }}
+                onMouseEnter={e => { if (!active) { (e.currentTarget as HTMLElement).style.background = 'var(--bg-card-hover)'; (e.currentTarget as HTMLElement).style.color = 'var(--text-primary)'; } }}
+                onMouseLeave={e => { if (!active) { (e.currentTarget as HTMLElement).style.background = 'var(--bg-card)'; (e.currentTarget as HTMLElement).style.color = 'var(--text-secondary)'; } }}
+              >
+                <span style={{ fontSize: 15 }}>{cat.icon}</span>
+                {cat.label}
+              </button>
+            );
+          })}
+        </div>
+        {category !== 'all' && (
+          <p style={{ fontSize: 12, color: 'var(--text-muted)', marginTop: 8, fontStyle: 'italic' }}>
+            {CATEGORIES.find(c => c.id === category)?.desc}
+          </p>
+        )}
       </div>
 
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
