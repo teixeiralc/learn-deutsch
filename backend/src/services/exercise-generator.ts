@@ -68,19 +68,33 @@ function buildFillBlank(word: Vocabulary, level: Level): GeneratedExercise {
 
   if (sentence) {
     // Replace the word occurrence (case-insensitive) with blank
-    const regex = new RegExp(`\\b${word.german}\\b`, 'i');
-    const question = sentence.german.replace(regex, '_____');
-    return {
-      id: randomId(),
-      type: 'fill_blank',
-      question: `Fill in the blank: "${question}"\n(English: "${sentence.english}")`,
-      correct_answer: word.german,
-      vocabulary_id: word.id,
-      sentence_id: sentence.id,
-      hint: `${word.german.length} letters — it means "${word.english}"`,
-      explanation: `The missing word is "${word.german}" (${word.english}). Full sentence: "${sentence.german}"`,
-      metadata: { speak_text: sentence.german },
-    };
+    // Try exact word boundary first
+    let regex = new RegExp(`\\b${word.german}\\b`, 'i');
+    let question = sentence.german.replace(regex, '_____');
+    
+    // If exact boundary fails (e.g. due to punctuation formatting), try a looser match just in case
+    // but only if it's safe and doesn't partially match inside other words.
+    // A simple contains check can work as fallback.
+    if (!question.includes('_____')) {
+      // Escape special regex characters in word.german
+      const escapedWord = word.german.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      regex = new RegExp(escapedWord, 'i');
+      question = sentence.german.replace(regex, '_____');
+    }
+
+    if (question.includes('_____')) {
+      return {
+        id: randomId(),
+        type: 'fill_blank',
+        question: `Fill in the blank: "${question}"\n(English: "${sentence.english}")`,
+        correct_answer: word.german,
+        vocabulary_id: word.id,
+        sentence_id: sentence.id,
+        hint: `${word.german.length} letters — it means "${word.english}"`,
+        explanation: `The missing word is "${word.german}" (${word.english}). Full sentence: "${sentence.german}"`,
+        metadata: { speak_text: sentence.german },
+      };
+    }
   }
 
   // Fallback: simple definition blank
